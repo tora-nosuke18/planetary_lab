@@ -1,0 +1,277 @@
+<?xml version="1.0" ?>
+<robot name="rover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0027929867125631876 0.0016095177665623776 0.4092816334857682" rpy="0 0 0"/>
+    <mass value="309.05833121832194"/>
+    <inertia ixx="5.420217" iyy="12.286392" izz="15.1977" ixy="0.145354" iyz="-0.222827" ixz="0.38667"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0.33" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0.33" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_left_back_1">
+  <inertial>
+    <origin xyz="3.304105354318132e-07 0.05500000000000016 4.996003610813204e-16" rpy="0 0 0"/>
+    <mass value="97.93082575512985"/>
+    <inertia ixx="0.982573" iyy="1.767651" izz="0.982573" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.363731 -0.278 0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/wheel_left_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.363731 -0.278 0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/wheel_left_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_right_back_1">
+  <inertial>
+    <origin xyz="3.304105352097686e-07 -0.05499999999999988 4.996003610813204e-16" rpy="0 0 0"/>
+    <mass value="97.93082575512983"/>
+    <inertia ixx="0.982573" iyy="1.767651" izz="0.982573" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.363731 0.278 0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/wheel_right_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.363731 0.278 0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/wheel_right_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_right_front_1">
+  <inertial>
+    <origin xyz="-3.304105354318132e-07 -0.05499999999999994 4.440892098500626e-16" rpy="0 0 0"/>
+    <mass value="97.9308257551298"/>
+    <inertia ixx="0.982573" iyy="1.767651" izz="0.982573" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.363731 0.278 0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/wheel_right_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.363731 0.278 0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/wheel_right_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_left_front_1">
+  <inertial>
+    <origin xyz="-3.3041053537630205e-07 0.05499999999999994 5.551115123125783e-16" rpy="0 0 0"/>
+    <mass value="97.93082575512975"/>
+    <inertia ixx="0.982573" iyy="1.767651" izz="0.982573" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.363731 -0.278 0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/wheel_left_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.363731 -0.278 0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/wheel_left_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="chassis_left_1">
+  <inertial>
+    <origin xyz="-1.7308169517470362e-14 0.03167866965335492 -0.1594464649986759" rpy="0 0 0"/>
+    <mass value="18.083780860304863"/>
+    <inertia ixx="0.081138" iyy="1.630619" izz="1.582709" ixy="-0.0" iyz="-0.015402" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.19 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/chassis_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.19 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/chassis_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="chassis_right_1">
+  <inertial>
+    <origin xyz="-1.2633700377715634e-15 -0.031678669653354724 -0.15944646499867604" rpy="0 0 0"/>
+    <mass value="18.083780860304806"/>
+    <inertia ixx="0.081138" iyy="1.630619" izz="1.582709" ixy="-0.0" iyz="0.015402" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.19 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/chassis_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.19 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/chassis_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="left_back" type="continuous">
+  <origin xyz="-0.363731 0.088 -0.21" rpy="0 0 0"/>
+  <parent link="chassis_left_1"/>
+  <child link="wheel_left_back_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="right_back" type="continuous">
+  <origin xyz="-0.363731 -0.088 -0.21" rpy="0 0 0"/>
+  <parent link="chassis_right_1"/>
+  <child link="wheel_right_back_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="right_front" type="continuous">
+  <origin xyz="0.363731 -0.088 -0.21" rpy="0 0 0"/>
+  <parent link="chassis_right_1"/>
+  <child link="wheel_right_front_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="left_front" type="continuous">
+  <origin xyz="0.363731 0.088 -0.21" rpy="0 0 0"/>
+  <parent link="chassis_left_1"/>
+  <child link="wheel_left_front_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="link_left" type="continuous">
+  <origin xyz="0.0 0.19 0.405" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="chassis_left_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="link_right" type="continuous">
+  <origin xyz="0.0 -0.19 0.405" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="chassis_right_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+
+  <!-- Camera -->
+
+  <xacro:property name="camera_link" value="0.05" /> <!-- Size of square 'camera' box -->
+
+  <joint name="camera_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0.33 0.0 0.35" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+  </joint>
+
+
+  <link name="camera_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+    <box size="${camera_link} ${camera_link} ${camera_link}"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+    <box size="${camera_link} ${camera_link} ${camera_link}"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+
+
+   <gazebo reference="camera_link">
+    <sensor type="camera" name="camera1">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>320</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise is sampled independently per pixel on each frame.
+               That pixel's noise value is added to each of its color
+               channels, which at that point lie in the range [0,1]. -->
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>camera1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+<xacro:sensor_d435 name="depthcamera" parent="camera_link">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+</xacro:sensor_d435> 
+
+
+</robot>
