@@ -9,5 +9,8 @@
 
   <xacro:include filename="$(find rover_description)/urdf/rover_description.xacro" />
 
+  <xacro:include filename="$(find rover_description)/urdf/diff_control.xacro" />
+
+  <xacro:include filename="$(find rover_description)/urdf/rover_realsense.xacro" />
 
 </robot>
