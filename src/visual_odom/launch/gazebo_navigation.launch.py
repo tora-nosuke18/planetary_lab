@@ -5,6 +5,8 @@ from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, GroupAction
 from launch_ros.actions import Node, SetRemap
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+
 
 def generate_launch_description():
 
@@ -16,6 +18,13 @@ def generate_launch_description():
         'wait_for_transform': True,
         'Odom/MinInliers': 12
     }
+
+    pkg_stereo_image_proc = get_package_share_directory(
+        'stereo_image_proc')
+
+    # Paths
+    stereo_image_proc_launch = PathJoinSubstitution(
+        [pkg_stereo_image_proc, 'launch', 'stereo_image_proc.launch.py'])
 
     rtabmap_params = {
         'frame_id': 'base_link',
@@ -34,14 +43,41 @@ def generate_launch_description():
     }
 
     remappings = [
-        ('odom', 'visual/odom'),
-        ('left/image_rect', 'infra1/image_raw'),
-        ('left/camera_info', 'infra1/camera_info'),
-        ('right/image_rect', 'infra2/image_raw'),
-        ('right/camera_info', 'infra2/camera_info')
+        # ('odom', '/visual_odom'),
+        ('left/image_rect', '/stereo_camera/infra1/image_rect'),
+        ('left/camera_info', '/stereo_camera/infra1/camera_info'),
+        ('right/image_rect', '/stereo_camera/infra2/image_rect'),
+        ('right/camera_info', '/stereo_camera/infra2/camera_info')
     ]
 
+
     return LaunchDescription([
+        # Run the ROS package stereo_image_proc for image rectification   
+        GroupAction(
+            actions=[
+
+                SetRemap(src='camera_info',dst='camera_info_throttle'),
+                SetRemap(src='camera_info',dst='camera_info_throttle'),
+
+                IncludeLaunchDescription(
+                    PythonLaunchDescriptionSource([stereo_image_proc_launch]),
+                    launch_arguments=[
+                        ('left_namespace', 'stereo_camera/infra1'),
+                        ('right_namespace', 'stereo_camera/infra2'),
+                        ('disparity_range', '128'),
+                    ]
+                ),
+            ]
+        ),
+
+        Node(
+            package='rtabmap_sync', executable='stereo_sync', output='screen',
+            namespace='stereo_camera',
+            remappings=[
+                ('left/image_rect',   'left/image_rect'),
+                ('right/image_rect',  'right/image_rect'),
+                ('left/camera_info',  'left/camera_info_throttle'),
+                ('right/camera_info', 'right/camera_info_throttle')]),
 
         # Nodes to launch       
         Node(
@@ -53,7 +89,7 @@ def generate_launch_description():
         Node(
             package='rtabmap_slam', executable='rtabmap', output='screen',
             parameters=[rtabmap_params],  # List format
-            remappings=remappings,
+            # remappings=remappings,
         ),
     
         # Uncomment this if you need to use rtabmap_viz

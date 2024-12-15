@@ -8,7 +8,7 @@ This is the URDF model for the Intel RealSense 430 camera, in it's
 aluminum peripherial evaluation case.
 -->
 
-<robot name="camera" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="stereo_camera" xmlns:xacro="http://ros.org/wiki/xacro">
   <!--File includes-->
   <xacro:include filename="$(find rover_description)/urdf/_d435.gazebo.xacro"/>
 
@@ -60,7 +60,7 @@ aluminum peripherial evaluation case.
         <geometry>
           <!-- <box size="${d435_cam_width} ${d435_cam_height} ${d435_cam_depth}"/> -->
           <!-- <mesh filename="package://realsense2_description/meshes/d435.dae" /> -->
-          <mesh filename="file://$(find realsense2_description)/meshes/d435.dae" scale="1 1 1"/>
+          <mesh filename="file://$(find rover_description)/meshes/d435.dae" scale="1 1 1"/>
         </geometry>
         <material name="${name}_aluminum"/>
       </visual>
@@ -139,7 +139,7 @@ aluminum peripherial evaluation case.
     <link name="${name}_color_optical_frame"/>
 
     <!-- Realsense Gazebo Plugin -->
-    <xacro:gazebo_d435 camera_name="${name}" reference_link="${name}_link" topics_ns="${topics_ns}" depth_optical_frame="${name}_depth_optical_frame" color_optical_frame="${name}_color_optical_frame" infrared1_optical_frame="${name}_left_ir_optical_frame" infrared2_optical_frame="${name}_right_ir_optical_frame" publish_pointcloud="${publish_pointcloud}"/>
+    <xacro:gazebo_d435 camera_name="${name}" topics_ns="stereo_camera" depth_optical_frame="${name}_depth_optical_frame" color_optical_frame="${name}_color_optical_frame" infrared1_optical_frame="${name}_left_ir_optical_frame" infrared2_optical_frame="${name}_right_ir_optical_frame" publish_pointcloud="${publish_pointcloud}"/>
 
   </xacro:macro>
 </robot>

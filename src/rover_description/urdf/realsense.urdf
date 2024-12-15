@@ -1,0 +1,250 @@
+<?xml version="1.0" ?>
+<robot name="realsense"
+  xmlns:xacro="http://ros.org/wiki/xacro">
+  
+  <link name="camera_bottom_screw_frame"></link>
+
+  <link name="camera_link">
+     <visual>
+      <origin xyz="0 0 0" rpy="-1.57 0 -1.57"/>
+      <geometry>
+        <mesh filename="file://$(find rover_description)/meshes/d435.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file://$(find rover_description)/meshes/d435.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="camera_depth_frame"></link>
+
+  <link name="camera_depth_optical_frame"></link>
+
+  <link name="camera_color_frame"></link>
+
+  <link name="camera_color_optical_frame"></link>
+
+  <link name="camera_left_ir_frame"></link>
+
+  <link name="camera_left_ir_optical_frame"></link>
+
+  <link name="camera_right_ir_frame"></link>
+
+  <link name="camera_right_ir_optical_frame"></link>
+
+  <link name="realsense_link">
+    <pose>0 0 0.25 0 0 0</pose>
+    <visual name="realsense_link_visual">
+      <pose>0 0 0 -1.57 0 -1.57</pose>
+      <geometry>
+        <mesh filename="file://$(find rover_description)/meshes/d435.dae" />
+      </geometry>
+    </visual>
+    <collision name="realsense_link_collision">
+      <geometry>
+        <mesh filename="file://$(find rover_description)/meshes/d435.dae" />
+      </geometry>
+    </collision>
+    <!-- <inertial>
+      <pose>0 0 0 0 0 0</pose>
+      <inertia>
+        <ixx>0.001</ixx>
+        <ixy>0.000</ixy>
+        <ixz>0.000</ixz>
+        <iyy>0.001</iyy>
+        <iyz>0.000</iyz>
+        <izz>0.001</izz>
+      </inertia>
+      <mass>0.564</mass>
+    </inertial> -->
+
+    <sensor name="cameradepth" type="depth">
+      <camera name="camera">
+        <horizontal_fov>1.57</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.100</stddev>
+        </noise>
+      </camera>
+      <always_on>1</always_on>
+      <update_rate>30</update_rate>
+      <visualize>0</visualize>
+    </sensor>
+    <sensor name="cameracolor" type="camera">
+      <camera name="camera">
+        <horizontal_fov>1.57</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>RGB_INT8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <always_on>1</always_on>
+      <update_rate>30</update_rate>
+      <visualize>1</visualize>
+    </sensor>
+    <sensor name="cameraired1" type="camera">
+      <camera name="camera">
+        <horizontal_fov>1.57</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>L_INT8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.05</stddev>
+        </noise>
+      </camera>
+      <always_on>1</always_on>
+      <update_rate>1</update_rate>
+      <visualize>0</visualize>
+    </sensor>
+    <sensor name="cameraired2" type="camera">
+      <camera name="camera">
+        <horizontal_fov>1.57</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>L_INT8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.05</stddev>
+        </noise>
+      </camera>
+      <always_on>1</always_on>
+      <update_rate>1</update_rate>
+      <visualize>0</visualize>
+    </sensor>
+  </link>
+
+  <joint name="camera_attachment_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0.36 0.0 0.35" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="camera_attachment_link"/>
+  </joint>
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="realsense_link" />
+    <child link="camera_bottom_screw_frame" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <joint name="camera_link_joint" type="fixed">
+    <parent link="camera_bottom_screw_frame" />
+    <child link="camera_link" />
+    <origin xyz="0 0.0175 0.0125 " rpy="0 0 0" />
+  </joint>
+
+  <joint name="camera_depth_joint" type="fixed">
+    <parent link="camera_link" />
+    <child link="camera_depth_frame" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <joint name="camera_depth_optical_joint" type="fixed">
+    <parent link="camera_depth_frame" />
+    <child link="camera_depth_optical_frame" />
+    <origin xyz="0 0 0 " rpy="-1.57 0 -1.57" />
+  </joint>
+
+  <joint name="camera_color_joint" type="fixed">
+    <parent link="camera_depth_frame" />
+    <child link="camera_color_frame" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <joint name="camera_color_optical_joint" type="fixed">
+    <parent link="camera_color_frame" />
+    <child link="camera_color_optical_frame" />
+    <origin xyz="0 0 0 " rpy="-1.57 0 -1.57" />
+  </joint>
+
+  <joint name="camera_left_ir_joint" type="fixed">
+    <parent link="camera_depth_frame" />
+    <child link="camera_left_ir_frame" />
+    <origin xyz="0 0 0 " rpy="0 0 0 " />
+  </joint>
+
+  <joint name="camera_left_ir_optical_joint" type="fixed">
+    <parent link="camera_left_ir_frame" />
+    <child link="camera_left_ir_optical_frame" />
+    <origin xyz="0 0 0 " rpy="-1.57 0 -1.57" />
+  </joint>
+
+  <joint name="camera_right_ir_joint" type="fixed">
+    <parent link="camera_depth_frame" />
+    <child link="camera_right_ir_frame" />
+    <origin xyz="0 -0.050 0 " rpy="0 0 0" />
+  </joint>
+
+  <joint name="camera_right_ir_optical_joint" type="fixed">
+    <parent link="camera_right_ir_frame" />
+    <child link="camera_right_ir_optical_frame" />
+    <origin xyz="0 0 0 " rpy="-1.57 0 -1.57" />
+  </joint>
+
+  <joint name="realsense_joint" type="fixed">
+    <parent link="camera_attachment_link"></parent>
+    <child link="realsense_link"></child>
+    <pose xyz="0 0 0 " rpy="0 0 -1.57" />
+  </joint>
+
+  <plugin name="sterep_camera" filename="librealsense_gazebo_plugin.so">
+    <prefix>stereo_camera</prefix>
+    <depthUpdateRate>10.0</depthUpdateRate>
+    <colorUpdateRate>10.0</colorUpdateRate>
+    <infraredUpdateRate>1.0</infraredUpdateRate>
+    <depthTopicName>aligned_depth_to_color/image_raw</depthTopicName>
+    <depthCameraInfoTopicName>depth/camera_info</depthCameraInfoTopicName>
+    <colorTopicName>color/image_raw</colorTopicName>
+    <colorCameraInfoTopicName>color/camera_info</colorCameraInfoTopicName>
+    <infrared1TopicName>/stereo_camera/infra1/image_raw</infrared1TopicName>
+    <infrared1CameraInfoTopicName>infra1/camera_info</infrared1CameraInfoTopicName>
+    <infrared2TopicName>/stereo_camera/infra2/image_raw</infrared2TopicName>
+    <infrared2CameraInfoTopicName>infra2/camera_info</infrared2CameraInfoTopicName>
+    <colorOpticalframeName>camera_color_optical_frame</colorOpticalframeName>
+    <depthOpticalframeName>camera_depth_optical_frame</depthOpticalframeName>
+    <infrared1OpticalframeName>camera_left_ir_optical_frame</infrared1OpticalframeName>
+    <infrared2OpticalframeName>camera_right_ir_optical_frame</infrared2OpticalframeName>
+    <rangeMinDepth>0.2</rangeMinDepth>
+    <rangeMaxDepth>10.0</rangeMaxDepth>
+    <pointCloud>true</pointCloud>
+    <pointCloudTopicName>depth/color/points</pointCloudTopicName>
+    <pointCloudCutoff>0.25</pointCloudCutoff>
+    <pointCloudCutoffMax>9.0</pointCloudCutoffMax>
+  </plugin>
+
+</robot>
