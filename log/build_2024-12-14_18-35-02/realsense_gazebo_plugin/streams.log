@@ -1,0 +1,102 @@
+[1.151s] Invoking command in '/home/tora/soft_ws/build/realsense_gazebo_plugin': /usr/bin/cmake /home/tora/soft_ws/src/realsense_gazebo_plugin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/tora/soft_ws/install/realsense_gazebo_plugin
+[1.674s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.674s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[1.675s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.675s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.675s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.675s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_microxrcedds_c;rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.677s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_microxrcedds_cpp;rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.750s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.763s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[1.785s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.826s] -- Found gazebo_ros: 3.7.0 (/opt/ros/humble/share/gazebo_ros/cmake)
+[1.874s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[1.909s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[1.910s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.914s] -- Searching for dependencies of ignition-math6
+[1.915s] -- Looking for OGRE...
+[1.924s] -- Found Ogre Ghadamon (1.9.0)
+[1.924s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[1.933s] -- Looking for OGRE_Paging...
+[1.934s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[1.934s] -- Looking for OGRE_Terrain...
+[1.934s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[1.934s] -- Looking for OGRE_Property...
+[1.934s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[1.934s] -- Looking for OGRE_RTShaderSystem...
+[1.934s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[1.934s] -- Looking for OGRE_Volume...
+[1.934s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[1.934s] -- Looking for OGRE_Overlay...
+[1.934s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[2.695s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.695s] -- Looking for ignition-transport8 -- found version 8.2.1
+[2.696s] -- Searching for dependencies of ignition-transport8
+[2.757s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[2.797s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[2.808s] -- Checking for module 'libzmq >= 4'
+[2.862s] --   Found libzmq , version 4.3.4
+[2.978s] -- Checking for module 'uuid'
+[3.030s] --   Found uuid, version 2.37.2
+[3.179s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[3.180s] -- Searching for dependencies of ignition-msgs5
+[3.279s] -- Looking for ignition-math6 -- found version 6.15.1
+[3.300s] -- Checking for module 'tinyxml2'
+[3.394s] --   Found tinyxml2, version 9.0.0
+[3.577s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[3.577s] -- Looking for ignition-common3 -- found version 3.14.0
+[3.578s] -- Searching for dependencies of ignition-common3
+[3.578s] -- Looking for dlfcn.h - found
+[3.578s] -- Looking for libdl - found
+[3.617s] -- Searching for <ignition-common3> component [graphics]
+[3.617s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[3.618s] -- Searching for dependencies of ignition-common3-graphics
+[3.619s] -- Looking for ignition-math6 -- found version 6.15.1
+[3.620s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[3.621s] -- Searching for dependencies of ignition-fuel_tools4
+[3.828s] -- Checking for module 'jsoncpp'
+[3.930s] --   Found jsoncpp, version 1.9.5
+[4.133s] -- Checking for module 'libzip'
+[4.231s] --   Found libzip, version 1.7.3
+[4.422s] -- Looking for ignition-common3 -- found version 3.14.0
+[4.423s] -- Looking for ignition-math6 -- found version 6.15.1
+[4.424s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[4.426s] -- Gazebo version: 11.10
+[4.428s] -- Found image_transport: 3.1.9 (/opt/ros/humble/share/image_transport/cmake)
+[4.566s] -- Found camera_info_manager: 3.1.9 (/opt/ros/humble/share/camera_info_manager/cmake)
+[4.900s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[5.084s] -- Configuring done
+[5.130s] -- Generating done
+[5.133s] -- Build files have been written to: /home/tora/soft_ws/build/realsense_gazebo_plugin
+[5.158s] Invoked command in '/home/tora/soft_ws/build/realsense_gazebo_plugin' returned '0': /usr/bin/cmake /home/tora/soft_ws/src/realsense_gazebo_plugin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/tora/soft_ws/install/realsense_gazebo_plugin
+[5.161s] Invoking command in '/home/tora/soft_ws/build/realsense_gazebo_plugin': /usr/bin/cmake --build /home/tora/soft_ws/build/realsense_gazebo_plugin -- -j16 -l16
+[5.396s] [35m[1mConsolidate compiler generated dependencies of target realsense_gazebo_plugin[0m
+[5.522s] [100%] Built target realsense_gazebo_plugin
+[5.573s] Invoked command in '/home/tora/soft_ws/build/realsense_gazebo_plugin' returned '0': /usr/bin/cmake --build /home/tora/soft_ws/build/realsense_gazebo_plugin -- -j16 -l16
+[6.098s] Invoking command in '/home/tora/soft_ws/build/realsense_gazebo_plugin': /usr/bin/cmake --install /home/tora/soft_ws/build/realsense_gazebo_plugin
+[6.142s] -- Install configuration: ""
+[6.143s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so
+[6.143s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/include/
+[6.143s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/include//realsense_gazebo_plugin
+[6.143s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/include//realsense_gazebo_plugin/RealSensePlugin.h
+[6.143s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/include//realsense_gazebo_plugin/gazebo_ros_realsense.h
+[6.143s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/library_path.sh
+[6.143s] -- Installing: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/library_path.dsv
+[6.143s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/ament_index/resource_index/package_run_dependencies/realsense_gazebo_plugin
+[6.144s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/ament_index/resource_index/parent_prefix_path/realsense_gazebo_plugin
+[6.144s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/ament_prefix_path.sh
+[6.144s] -- Installing: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/ament_prefix_path.dsv
+[6.144s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/path.sh
+[6.144s] -- Installing: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/path.dsv
+[6.144s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/local_setup.bash
+[6.144s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/local_setup.sh
+[6.144s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/local_setup.zsh
+[6.144s] -- Installing: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/local_setup.dsv
+[6.145s] -- Installing: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.dsv
+[6.145s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/ament_index/resource_index/packages/realsense_gazebo_plugin
+[6.145s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.145s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/cmake/ament_cmake_export_libraries-extras.cmake
+[6.145s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/cmake/realsense_gazebo_pluginConfig.cmake
+[6.145s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/cmake/realsense_gazebo_pluginConfig-version.cmake
+[6.145s] -- Up-to-date: /home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.xml
+[6.148s] Invoked command in '/home/tora/soft_ws/build/realsense_gazebo_plugin' returned '0': /usr/bin/cmake --install /home/tora/soft_ws/build/realsense_gazebo_plugin

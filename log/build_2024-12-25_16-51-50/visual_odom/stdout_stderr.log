@@ -1,0 +1,14 @@
+running develop
+running egg_info
+writing visual_odom.egg-info/PKG-INFO
+writing dependency_links to visual_odom.egg-info/dependency_links.txt
+writing entry points to visual_odom.egg-info/entry_points.txt
+writing requirements to visual_odom.egg-info/requires.txt
+writing top-level names to visual_odom.egg-info/top_level.txt
+reading manifest file 'visual_odom.egg-info/SOURCES.txt'
+writing manifest file 'visual_odom.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual-odom.egg-link (link to .)
+
+Installed /home/tora/soft_ws/build/visual_odom
+running symlink_data

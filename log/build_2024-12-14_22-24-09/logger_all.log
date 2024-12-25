@@ -1,0 +1,416 @@
+[0.151s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.151s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x787f368d7310>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x787f3685bfa0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x787f3685bfa0>>, mixin_verb=('build',))
+[0.427s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.428s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.428s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.428s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.428s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.428s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.428s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/tora/soft_ws'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ignore', 'ignore_ament_install']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore_ament_install'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_pkg']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_pkg'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_meta']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_meta'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ros']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ros'
+[0.443s] DEBUG:colcon.colcon_core.package_identification:Package 'src/controller' with type 'ros.ament_python' and name 'controller'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extension 'ignore'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extension 'ignore_ament_install'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extensions ['colcon_pkg']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extension 'colcon_pkg'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extensions ['colcon_meta']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extension 'colcon_meta'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extensions ['ros']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extension 'ros'
+[0.444s] DEBUG:colcon.colcon_core.package_identification:Package 'src/navigation' with type 'ros.ament_python' and name 'navigation'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense_gazebo_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense_gazebo_plugin) by extension 'ignore'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense_gazebo_plugin) by extension 'ignore_ament_install'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense_gazebo_plugin) by extensions ['colcon_pkg']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense_gazebo_plugin) by extension 'colcon_pkg'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense_gazebo_plugin) by extensions ['colcon_meta']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense_gazebo_plugin) by extension 'colcon_meta'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense_gazebo_plugin) by extensions ['ros']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense_gazebo_plugin) by extension 'ros'
+[0.445s] DEBUG:colcon.colcon_core.package_identification:Package 'src/realsense_gazebo_plugin' with type 'ros.catkin' and name 'realsense_gazebo_plugin'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extension 'ignore'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extension 'ignore_ament_install'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extensions ['colcon_pkg']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extension 'colcon_pkg'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extensions ['colcon_meta']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extension 'colcon_meta'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extensions ['ros']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extension 'ros'
+[0.447s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rover_description' with type 'ros.ament_python' and name 'rover_description'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/visual_odom) by extensions ['ignore', 'ignore_ament_install']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/visual_odom) by extension 'ignore'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/visual_odom) by extension 'ignore_ament_install'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/visual_odom) by extensions ['colcon_pkg']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/visual_odom) by extension 'colcon_pkg'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/visual_odom) by extensions ['colcon_meta']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/visual_odom) by extension 'colcon_meta'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/visual_odom) by extensions ['ros']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/visual_odom) by extension 'ros'
+[0.448s] DEBUG:colcon.colcon_core.package_identification:Package 'src/visual_odom' with type 'ros.ament_python' and name 'visual_odom'
+[0.448s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.448s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.448s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.448s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.448s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.476s] WARNING:colcon.colcon_core.prefix_path.colcon:The path '/home/tora/gazebo_realsense_test/install' in the environment variable COLCON_PREFIX_PATH doesn't exist
+[0.477s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/tora/gazebo_realsense_test/install/realsense2_description' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.477s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/tora/gazebo_realsense_test/install/realsense2_camera_msgs' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.477s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/tora/gazebo_realsense_test/install/gazebo_sensor_ros2' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.486s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/tora/gazebo_realsense_test/install/realsense2_description' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.486s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/tora/gazebo_realsense_test/install/realsense2_camera_msgs' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.486s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/tora/gazebo_realsense_test/install/realsense_gazebo_plugin' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.486s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/tora/gazebo_realsense_test/install/gazebo_sensor_ros2' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.488s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/tora/soft_ws/install
+[0.489s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/tora/realsense_ws/install
+[0.489s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/tora/turtlebot3_ws/install
+[0.491s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 39 installed packages in /home/tora/microros_ws/install
+[0.491s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 10 installed packages in /home/tora/seminar_ws/install
+[0.498s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 238 installed packages in /home/tora/autoware/install
+[0.500s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/tora/unit1_ws/install
+[0.501s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/tora/gazebo_realsense_test/src/install
+[0.503s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 494 installed packages in /opt/ros/humble
+[0.507s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.587s] DEBUG:colcon.colcon_core.verb:Building package 'controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tora/soft_ws/build/controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tora/soft_ws/install/controller', 'merge_install': False, 'path': '/home/tora/soft_ws/src/controller', 'symlink_install': True, 'test_result_base': None}
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_target' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_clean_first' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_force_configure' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'ament_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.588s] DEBUG:colcon.colcon_core.verb:Building package 'navigation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tora/soft_ws/build/navigation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tora/soft_ws/install/navigation', 'merge_install': False, 'path': '/home/tora/soft_ws/src/navigation', 'symlink_install': True, 'test_result_base': None}
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_target' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_clean_cache' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_clean_first' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_force_configure' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'ament_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'catkin_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.589s] DEBUG:colcon.colcon_core.verb:Building package 'realsense_gazebo_plugin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tora/soft_ws/build/realsense_gazebo_plugin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tora/soft_ws/install/realsense_gazebo_plugin', 'merge_install': False, 'path': '/home/tora/soft_ws/src/realsense_gazebo_plugin', 'symlink_install': True, 'test_result_base': None}
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'rover_description' build argument 'cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'rover_description' build argument 'cmake_target' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'rover_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'rover_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'rover_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'rover_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'rover_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'rover_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'rover_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.589s] DEBUG:colcon.colcon_core.verb:Building package 'rover_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tora/soft_ws/build/rover_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tora/soft_ws/install/rover_description', 'merge_install': False, 'path': '/home/tora/soft_ws/src/rover_description', 'symlink_install': True, 'test_result_base': None}
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'visual_odom' build argument 'cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'visual_odom' build argument 'cmake_target' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'visual_odom' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'visual_odom' build argument 'cmake_clean_cache' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'visual_odom' build argument 'cmake_clean_first' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'visual_odom' build argument 'cmake_force_configure' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'visual_odom' build argument 'ament_cmake_args' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'visual_odom' build argument 'catkin_cmake_args' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'visual_odom' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.590s] DEBUG:colcon.colcon_core.verb:Building package 'visual_odom' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tora/soft_ws/build/visual_odom', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tora/soft_ws/install/visual_odom', 'merge_install': False, 'path': '/home/tora/soft_ws/src/visual_odom', 'symlink_install': True, 'test_result_base': None}
+[0.590s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.591s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.591s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/tora/soft_ws/src/controller' with build type 'ament_python'
+[0.591s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'ament_prefix_path')
+[0.594s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.594s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/controller/share/controller/hook/ament_prefix_path.ps1'
+[0.595s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/controller/share/controller/hook/ament_prefix_path.dsv'
+[0.596s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/controller/share/controller/hook/ament_prefix_path.sh'
+[0.596s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.596s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.621s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/tora/soft_ws/src/navigation' with build type 'ament_python'
+[0.621s] Level 1:colcon.colcon_core.shell:create_environment_hook('navigation', 'ament_prefix_path')
+[0.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/navigation/share/navigation/hook/ament_prefix_path.ps1'
+[0.622s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/navigation/share/navigation/hook/ament_prefix_path.dsv'
+[0.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/navigation/share/navigation/hook/ament_prefix_path.sh'
+[0.623s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.623s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.647s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/tora/soft_ws/src/realsense_gazebo_plugin' with build type 'catkin'
+[0.647s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tora/soft_ws/src/realsense_gazebo_plugin'
+[0.647s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.647s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.671s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/tora/soft_ws/src/rover_description' with build type 'ament_python'
+[0.671s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_description', 'ament_prefix_path')
+[0.671s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/rover_description/share/rover_description/hook/ament_prefix_path.ps1'
+[0.672s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/rover_description/share/rover_description/hook/ament_prefix_path.dsv'
+[0.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/rover_description/share/rover_description/hook/ament_prefix_path.sh'
+[0.673s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.673s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.697s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/tora/soft_ws/src/visual_odom' with build type 'ament_python'
+[0.697s] Level 1:colcon.colcon_core.shell:create_environment_hook('visual_odom', 'ament_prefix_path')
+[0.697s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/visual_odom/share/visual_odom/hook/ament_prefix_path.ps1'
+[0.698s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/visual_odom/share/visual_odom/hook/ament_prefix_path.dsv'
+[0.698s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/visual_odom/share/visual_odom/hook/ament_prefix_path.sh'
+[0.699s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.699s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.214s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/tora/soft_ws/src/controller'
+[1.215s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.215s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.734s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/tora/soft_ws/src/navigation'
+[1.734s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.734s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.778s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tora/soft_ws/build/realsense_gazebo_plugin': /usr/bin/cmake /home/tora/soft_ws/src/realsense_gazebo_plugin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/tora/soft_ws/install/realsense_gazebo_plugin
+[2.240s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/tora/soft_ws/src/rover_description'
+[2.240s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.240s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.608s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/tora/soft_ws/src/visual_odom'
+[2.608s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.608s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.977s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/navigation/share/ament_index/resource_index/packages/navigation
+[2.977s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/navigation/share/navigation/package.xml
+[2.978s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/navigation/share/navigation/launch/navigation.launch.py
+[2.978s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/navigation/share/navigation/params/navigation_params.yaml
+[2.980s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tora/soft_ws/build/navigation': PYTHONPATH=/home/tora/soft_ws/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/navigation/build --no-deps symlink_data --force
+[2.983s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/visual_odom/share/ament_index/resource_index/packages/visual_odom
+[2.983s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/visual_odom/share/visual_odom/package.xml
+[2.983s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch/visual_odom.launch.xml
+[2.983s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch/gazebo_navigation.launch.py
+[2.983s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch/stereo_slam.launch.py
+[2.985s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tora/soft_ws/build/visual_odom': PYTHONPATH=/home/tora/soft_ws/build/visual_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/visual_odom/build --no-deps symlink_data --force
+[3.026s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/controller/share/ament_index/resource_index/packages/controller
+[3.027s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/controller/share/controller/package.xml
+[3.027s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/controller/share/controller/launch/simple_run.launch.xml
+[3.027s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/controller/lib/controller/odom_calc
+[3.027s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/controller/lib/controller/rover
+[3.027s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/controller/lib/controller/teleop_joy_control
+[3.027s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/controller/lib/controller/wheel_ctl_serial_master
+[3.029s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tora/soft_ws/build/controller': PYTHONPATH=/home/tora/soft_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/controller/build --no-deps symlink_data --force
+[3.229s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/ament_index/resource_index/packages/rover_description
+[3.229s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/package.xml
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/launch/display.launch.py
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/launch/gazebo.launch.py
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/launch/gazebo_world.launch.py
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/urdf/rover.trans
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/urdf/materials.xacro
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/urdf/rover_description.xacro
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/urdf/diff_control.xacro
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/urdf/realsense.urdf
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/urdf/_d435.gazebo.xacro
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/urdf/rover.xacro
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/urdf/rover_realsense.xacro
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/urdf/rover.gazebo
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/urdf/_d435.urdf.xacro
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/meshes/chassis_left_1.stl
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/meshes/d435.dae
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/meshes/wheel_right_front_1.stl
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/meshes/wheel_right_back_1.stl
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/meshes/chassis_right_1.stl
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/meshes/base_link.stl
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/meshes/wheel_left_front_1.stl
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/meshes/wheel_left_back_1.stl
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/config/display.rviz
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/config/diff_robot.yaml
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/world/display.world
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/models/model.sdf
+[3.230s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/tora/soft_ws/install/rover_description/share/rover_description/models/model.config
+[3.234s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tora/soft_ws/build/rover_description': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/rover_description/build --no-deps symlink_data --force
+[3.473s] Level 1:colcon.colcon_core.shell:create_environment_hook('visual_odom', 'pythonpath_develop')
+[3.473s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/build/visual_odom/share/visual_odom/hook/pythonpath_develop.ps1'
+[3.473s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tora/soft_ws/build/visual_odom' returned '0': PYTHONPATH=/home/tora/soft_ws/build/visual_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/visual_odom/build --no-deps symlink_data --force
+[3.474s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/build/visual_odom/share/visual_odom/hook/pythonpath_develop.dsv'
+[3.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/build/visual_odom/share/visual_odom/hook/pythonpath_develop.sh'
+[3.480s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/visual_odom' for CMake module files
+[3.480s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/visual_odom' for CMake config files
+[3.481s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/visual_odom/lib'
+[3.481s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/visual_odom/bin'
+[3.481s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/visual_odom/lib/pkgconfig/visual_odom.pc'
+[3.481s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages'
+[3.481s] Level 1:colcon.colcon_core.shell:create_environment_hook('visual_odom', 'pythonpath')
+[3.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/visual_odom/share/visual_odom/hook/pythonpath.ps1'
+[3.482s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/visual_odom/share/visual_odom/hook/pythonpath.dsv'
+[3.483s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/visual_odom/share/visual_odom/hook/pythonpath.sh'
+[3.483s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/visual_odom/bin'
+[3.483s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(visual_odom)
+[3.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/visual_odom/share/visual_odom/package.ps1'
+[3.485s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tora/soft_ws/install/visual_odom/share/visual_odom/package.dsv'
+[3.485s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/visual_odom/share/visual_odom/package.sh'
+[3.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/visual_odom/share/visual_odom/package.bash'
+[3.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/visual_odom/share/visual_odom/package.zsh'
+[3.488s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tora/soft_ws/install/visual_odom/share/colcon-core/packages/visual_odom)
+[3.496s] Level 1:colcon.colcon_core.shell:create_environment_hook('navigation', 'pythonpath_develop')
+[3.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/build/navigation/share/navigation/hook/pythonpath_develop.ps1'
+[3.496s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tora/soft_ws/build/navigation' returned '0': PYTHONPATH=/home/tora/soft_ws/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/navigation/build --no-deps symlink_data --force
+[3.497s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/build/navigation/share/navigation/hook/pythonpath_develop.dsv'
+[3.498s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/build/navigation/share/navigation/hook/pythonpath_develop.sh'
+[3.498s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/navigation' for CMake module files
+[3.499s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/navigation' for CMake config files
+[3.499s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/navigation/lib'
+[3.499s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/navigation/bin'
+[3.499s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/navigation/lib/pkgconfig/navigation.pc'
+[3.500s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/navigation/lib/python3.10/site-packages'
+[3.500s] Level 1:colcon.colcon_core.shell:create_environment_hook('navigation', 'pythonpath')
+[3.500s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/navigation/share/navigation/hook/pythonpath.ps1'
+[3.500s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/navigation/share/navigation/hook/pythonpath.dsv'
+[3.501s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/navigation/share/navigation/hook/pythonpath.sh'
+[3.501s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/navigation/bin'
+[3.501s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(navigation)
+[3.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/navigation/share/navigation/package.ps1'
+[3.502s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tora/soft_ws/install/navigation/share/navigation/package.dsv'
+[3.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/navigation/share/navigation/package.sh'
+[3.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/navigation/share/navigation/package.bash'
+[3.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/navigation/share/navigation/package.zsh'
+[3.505s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tora/soft_ws/install/navigation/share/colcon-core/packages/navigation)
+[3.529s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'pythonpath_develop')
+[3.529s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/build/controller/share/controller/hook/pythonpath_develop.ps1'
+[3.529s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tora/soft_ws/build/controller' returned '0': PYTHONPATH=/home/tora/soft_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/controller/build --no-deps symlink_data --force
+[3.529s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/build/controller/share/controller/hook/pythonpath_develop.dsv'
+[3.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/build/controller/share/controller/hook/pythonpath_develop.sh'
+[3.530s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/controller' for CMake module files
+[3.530s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/controller' for CMake config files
+[3.530s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/controller/lib'
+[3.531s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/controller/bin'
+[3.531s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/controller/lib/pkgconfig/controller.pc'
+[3.531s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/controller/lib/python3.10/site-packages'
+[3.531s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'pythonpath')
+[3.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/controller/share/controller/hook/pythonpath.ps1'
+[3.531s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/controller/share/controller/hook/pythonpath.dsv'
+[3.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/controller/share/controller/hook/pythonpath.sh'
+[3.531s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/controller/bin'
+[3.532s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller)
+[3.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/controller/share/controller/package.ps1'
+[3.532s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tora/soft_ws/install/controller/share/controller/package.dsv'
+[3.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/controller/share/controller/package.sh'
+[3.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/controller/share/controller/package.bash'
+[3.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/controller/share/controller/package.zsh'
+[3.533s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tora/soft_ws/install/controller/share/colcon-core/packages/controller)
+[3.844s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_description', 'pythonpath_develop')
+[3.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/build/rover_description/share/rover_description/hook/pythonpath_develop.ps1'
+[3.845s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tora/soft_ws/build/rover_description' returned '0': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/rover_description/build --no-deps symlink_data --force
+[3.845s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/build/rover_description/share/rover_description/hook/pythonpath_develop.dsv'
+[3.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/build/rover_description/share/rover_description/hook/pythonpath_develop.sh'
+[3.846s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/rover_description' for CMake module files
+[3.846s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/rover_description' for CMake config files
+[3.846s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/rover_description/lib'
+[3.846s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/rover_description/bin'
+[3.847s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/rover_description/lib/pkgconfig/rover_description.pc'
+[3.847s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages'
+[3.847s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_description', 'pythonpath')
+[3.847s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/rover_description/share/rover_description/hook/pythonpath.ps1'
+[3.847s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/rover_description/share/rover_description/hook/pythonpath.dsv'
+[3.847s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/rover_description/share/rover_description/hook/pythonpath.sh'
+[3.847s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/rover_description/bin'
+[3.847s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rover_description)
+[3.848s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/rover_description/share/rover_description/package.ps1'
+[3.848s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tora/soft_ws/install/rover_description/share/rover_description/package.dsv'
+[3.848s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/rover_description/share/rover_description/package.sh'
+[3.848s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/rover_description/share/rover_description/package.bash'
+[3.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/rover_description/share/rover_description/package.zsh'
+[3.849s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tora/soft_ws/install/rover_description/share/colcon-core/packages/rover_description)
+[5.120s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tora/soft_ws/build/realsense_gazebo_plugin' returned '0': /usr/bin/cmake /home/tora/soft_ws/src/realsense_gazebo_plugin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/tora/soft_ws/install/realsense_gazebo_plugin
+[5.122s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tora/soft_ws/build/realsense_gazebo_plugin': /usr/bin/cmake --build /home/tora/soft_ws/build/realsense_gazebo_plugin -- -j16 -l16
+[5.556s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tora/soft_ws/build/realsense_gazebo_plugin' returned '0': /usr/bin/cmake --build /home/tora/soft_ws/build/realsense_gazebo_plugin -- -j16 -l16
+[5.606s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tora/soft_ws/build/realsense_gazebo_plugin': /usr/bin/cmake --install /home/tora/soft_ws/build/realsense_gazebo_plugin
+[5.658s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tora/soft_ws/build/realsense_gazebo_plugin' returned '0': /usr/bin/cmake --install /home/tora/soft_ws/build/realsense_gazebo_plugin
+[5.659s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense_gazebo_plugin', 'ros_package_path')
+[5.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ros_package_path.ps1'
+[5.660s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ros_package_path.dsv'
+[5.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ros_package_path.sh'
+[5.662s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense_gazebo_plugin', 'pkg_config_path')
+[5.663s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/pkg_config_path.ps1'
+[5.664s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/pkg_config_path.dsv'
+[5.664s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/pkg_config_path.sh'
+[5.676s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense_gazebo_plugin', 'pkg_config_path_multiarch')
+[5.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/pkg_config_path_multiarch.ps1'
+[5.677s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/pkg_config_path_multiarch.dsv'
+[5.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/pkg_config_path_multiarch.sh'
+[5.679s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense_gazebo_plugin)
+[5.680s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/realsense_gazebo_plugin' for CMake module files
+[5.681s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/realsense_gazebo_plugin' for CMake config files
+[5.681s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense_gazebo_plugin', 'cmake_prefix_path')
+[5.682s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/cmake_prefix_path.ps1'
+[5.682s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/cmake_prefix_path.dsv'
+[5.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/cmake_prefix_path.sh'
+[5.684s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/realsense_gazebo_plugin/lib'
+[5.684s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense_gazebo_plugin', 'ld_library_path_lib')
+[5.685s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ld_library_path_lib.ps1'
+[5.685s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ld_library_path_lib.dsv'
+[5.686s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ld_library_path_lib.sh'
+[5.687s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/realsense_gazebo_plugin/bin'
+[5.687s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/realsense_gazebo_plugin/lib/pkgconfig/realsense_gazebo_plugin.pc'
+[5.687s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/realsense_gazebo_plugin/lib/python3.10/site-packages'
+[5.687s] Level 1:colcon.colcon_core.environment:checking '/home/tora/soft_ws/install/realsense_gazebo_plugin/bin'
+[5.688s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.ps1'
+[5.689s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.dsv'
+[5.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.sh'
+[5.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.bash'
+[5.692s] INFO:colcon.colcon_core.shell:Creating package script '/home/tora/soft_ws/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.zsh'
+[5.693s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tora/soft_ws/install/realsense_gazebo_plugin/share/colcon-core/packages/realsense_gazebo_plugin)
+[5.693s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.693s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.694s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.694s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.708s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.708s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.708s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.735s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.736s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tora/soft_ws/install/local_setup.ps1'
+[5.738s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/tora/soft_ws/install/_local_setup_util_ps1.py'
+[5.740s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tora/soft_ws/install/setup.ps1'
+[5.770s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tora/soft_ws/install/local_setup.sh'
+[5.771s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/tora/soft_ws/install/_local_setup_util_sh.py'
+[5.772s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tora/soft_ws/install/setup.sh'
+[5.800s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tora/soft_ws/install/local_setup.bash'
+[5.801s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tora/soft_ws/install/setup.bash'
+[5.828s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tora/soft_ws/install/local_setup.zsh'
+[5.829s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tora/soft_ws/install/setup.zsh'

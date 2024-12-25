@@ -1,0 +1,54 @@
+[2.884s] Invoking command in '/home/tora/soft_ws/build/rover_description': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/tora/soft_ws/build/rover_description/build
+[3.144s] /home/tora/.local/lib/python3.10/site-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[3.144s]   warnings.warn(
+[3.180s] running develop
+[3.352s] Removing /home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages/rover-description.egg-link (link to .)
+[3.372s] Invoked command in '/home/tora/soft_ws/build/rover_description' returned '0': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/tora/soft_ws/build/rover_description/build
+[3.374s] Invoking command in '/home/tora/soft_ws/src/rover_description': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/rover_description build --build-base /home/tora/soft_ws/build/rover_description/build install --record /home/tora/soft_ws/build/rover_description/install.log --install-scripts $base/lib/rover_description --single-version-externally-managed install_data --force
+[3.598s] /home/tora/.local/lib/python3.10/site-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[3.598s]   warnings.warn(
+[3.616s] running egg_info
+[3.617s] writing ../../build/rover_description/rover_description.egg-info/PKG-INFO
+[3.617s] writing dependency_links to ../../build/rover_description/rover_description.egg-info/dependency_links.txt
+[3.617s] writing entry points to ../../build/rover_description/rover_description.egg-info/entry_points.txt
+[3.617s] writing requirements to ../../build/rover_description/rover_description.egg-info/requires.txt
+[3.617s] writing top-level names to ../../build/rover_description/rover_description.egg-info/top_level.txt
+[3.618s] reading manifest file '../../build/rover_description/rover_description.egg-info/SOURCES.txt'
+[3.619s] writing manifest file '../../build/rover_description/rover_description.egg-info/SOURCES.txt'
+[3.619s] running build
+[3.619s] running build_py
+[3.619s] running install
+[3.620s] running install_lib
+[3.620s] creating /home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages/rover_description
+[3.620s] copying /home/tora/soft_ws/build/rover_description/build/lib/rover_description/__init__.py -> /home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages/rover_description
+[3.621s] byte-compiling /home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages/rover_description/__init__.py to __init__.cpython-310.pyc
+[3.621s] running install_data
+[3.621s] copying resource/rover_description -> /home/tora/soft_ws/install/rover_description/share/ament_index/resource_index/packages
+[3.621s] copying package.xml -> /home/tora/soft_ws/install/rover_description/share/rover_description
+[3.621s] copying launch/display.launch.py -> /home/tora/soft_ws/install/rover_description/share/rover_description/launch
+[3.622s] copying launch/gazebo.launch.py -> /home/tora/soft_ws/install/rover_description/share/rover_description/launch
+[3.622s] copying launch/gazebo_world.launch.py -> /home/tora/soft_ws/install/rover_description/share/rover_description/launch
+[3.622s] copying urdf/rover.trans -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[3.622s] copying urdf/materials.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[3.622s] copying urdf/rover_description.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[3.622s] copying urdf/diff_control.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[3.622s] copying urdf/realsense.urdf -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[3.622s] copying urdf/_d435.gazebo.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[3.622s] copying urdf/rover.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[3.623s] copying urdf/rover_realsense.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[3.623s] copying urdf/rover.gazebo -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[3.623s] copying urdf/_d435.urdf.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[3.623s] copying meshes/chassis_left_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[3.623s] copying meshes/d435.dae -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[3.630s] copying meshes/wheel_right_front_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[3.630s] copying meshes/wheel_right_back_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[3.630s] copying meshes/chassis_right_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[3.631s] copying meshes/base_link.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[3.631s] copying meshes/wheel_left_front_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[3.631s] copying meshes/wheel_left_back_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[3.631s] error: can't copy 'models/mars_terrain': doesn't exist or not a regular file
+[3.631s] copying config/display.rviz -> /home/tora/soft_ws/install/rover_description/share/rover_description/config
+[3.631s] copying config/diff_robot.yaml -> /home/tora/soft_ws/install/rover_description/share/rover_description/config
+[3.631s] copying world/display.world -> /home/tora/soft_ws/install/rover_description/share/rover_description/world
+[3.631s] creating /home/tora/soft_ws/install/rover_description/share/rover_description/models
+[3.671s] Invoked command in '/home/tora/soft_ws/src/rover_description' returned '1': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/rover_description build --build-base /home/tora/soft_ws/build/rover_description/build install --record /home/tora/soft_ws/build/rover_description/install.log --install-scripts $base/lib/rover_description --single-version-externally-managed install_data --force

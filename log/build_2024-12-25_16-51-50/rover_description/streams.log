@@ -1,0 +1,18 @@
+[3.164s] Invoking command in '/home/tora/soft_ws/build/rover_description': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/rover_description/build --no-deps symlink_data
+[3.414s] running develop
+[3.568s] running egg_info
+[3.569s] writing rover_description.egg-info/PKG-INFO
+[3.569s] writing dependency_links to rover_description.egg-info/dependency_links.txt
+[3.569s] writing entry points to rover_description.egg-info/entry_points.txt
+[3.574s] writing requirements to rover_description.egg-info/requires.txt
+[3.574s] writing top-level names to rover_description.egg-info/top_level.txt
+[3.575s] reading manifest file 'rover_description.egg-info/SOURCES.txt'
+[3.576s] writing manifest file 'rover_description.egg-info/SOURCES.txt'
+[3.578s] running build_ext
+[3.578s] Creating /home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages/rover-description.egg-link (link to .)
+[3.578s] 
+[3.578s] Installed /home/tora/soft_ws/build/rover_description
+[3.578s] running symlink_data
+[3.579s] symbolically linking /home/tora/soft_ws/build/rover_description/models/term3_rover/model.sdf -> /home/tora/soft_ws/install/rover_description/share/rover_description/models
+[3.579s] error: [Errno 17] File exists: '/home/tora/soft_ws/build/rover_description/models/term3_rover/model.sdf' -> '/home/tora/soft_ws/install/rover_description/share/rover_description/models/model.sdf'
+[3.606s] Invoked command in '/home/tora/soft_ws/build/rover_description' returned '1': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/rover_description/build --no-deps symlink_data

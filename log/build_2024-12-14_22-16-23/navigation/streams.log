@@ -1,0 +1,30 @@
+[2.903s] Invoking command in '/home/tora/soft_ws/build/navigation': PYTHONPATH=/home/tora/soft_ws/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/tora/soft_ws/build/navigation/build
+[3.252s] running develop
+[3.408s] Removing /home/tora/soft_ws/install/navigation/lib/python3.10/site-packages/navigation.egg-link (link to .)
+[3.432s] Invoked command in '/home/tora/soft_ws/build/navigation' returned '0': PYTHONPATH=/home/tora/soft_ws/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/tora/soft_ws/build/navigation/build
+[3.433s] Invoking command in '/home/tora/soft_ws/src/navigation': PYTHONPATH=/home/tora/soft_ws/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navigation build --build-base /home/tora/soft_ws/build/navigation/build install --record /home/tora/soft_ws/build/navigation/install.log --single-version-externally-managed install_data --force
+[3.695s] running egg_info
+[3.695s] writing ../../build/navigation/navigation.egg-info/PKG-INFO
+[3.695s] writing dependency_links to ../../build/navigation/navigation.egg-info/dependency_links.txt
+[3.695s] writing entry points to ../../build/navigation/navigation.egg-info/entry_points.txt
+[3.695s] writing requirements to ../../build/navigation/navigation.egg-info/requires.txt
+[3.695s] writing top-level names to ../../build/navigation/navigation.egg-info/top_level.txt
+[3.696s] reading manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'
+[3.697s] writing manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'
+[3.697s] running build
+[3.697s] running build_py
+[3.698s] running install
+[3.698s] running install_lib
+[3.698s] creating /home/tora/soft_ws/install/navigation/lib/python3.10/site-packages/navigation
+[3.698s] copying /home/tora/soft_ws/build/navigation/build/lib/navigation/__init__.py -> /home/tora/soft_ws/install/navigation/lib/python3.10/site-packages/navigation
+[3.699s] byte-compiling /home/tora/soft_ws/install/navigation/lib/python3.10/site-packages/navigation/__init__.py to __init__.cpython-310.pyc
+[3.699s] running install_data
+[3.699s] copying resource/navigation -> /home/tora/soft_ws/install/navigation/share/ament_index/resource_index/packages
+[3.699s] copying package.xml -> /home/tora/soft_ws/install/navigation/share/navigation
+[3.699s] copying launch/navigation.launch.py -> /home/tora/soft_ws/install/navigation/share/navigation/launch
+[3.699s] copying params/navigation_params.yaml -> /home/tora/soft_ws/install/navigation/share/navigation/params
+[3.700s] running install_egg_info
+[3.701s] Copying ../../build/navigation/navigation.egg-info to /home/tora/soft_ws/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info
+[3.702s] running install_scripts
+[3.719s] writing list of installed files to '/home/tora/soft_ws/build/navigation/install.log'
+[3.737s] Invoked command in '/home/tora/soft_ws/src/navigation' returned '0': PYTHONPATH=/home/tora/soft_ws/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navigation build --build-base /home/tora/soft_ws/build/navigation/build install --record /home/tora/soft_ws/build/navigation/install.log --single-version-externally-managed install_data --force

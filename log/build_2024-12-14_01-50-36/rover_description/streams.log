@@ -1,0 +1,21 @@
+[3.296s] Invoking command in '/home/tora/soft_ws/build/rover_description': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/rover_description/build --no-deps symlink_data
+[3.645s] /home/tora/.local/lib/python3.10/site-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[3.645s]   warnings.warn(
+[3.709s] running develop
+[3.992s] running egg_info
+[3.992s] writing rover_description.egg-info/PKG-INFO
+[3.992s] writing dependency_links to rover_description.egg-info/dependency_links.txt
+[3.993s] writing entry points to rover_description.egg-info/entry_points.txt
+[3.993s] writing requirements to rover_description.egg-info/requires.txt
+[3.993s] writing top-level names to rover_description.egg-info/top_level.txt
+[3.995s] reading manifest file 'rover_description.egg-info/SOURCES.txt'
+[3.996s] writing manifest file 'rover_description.egg-info/SOURCES.txt'
+[3.998s] running build_ext
+[3.998s] Creating /home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages/rover-description.egg-link (link to .)
+[3.999s] 
+[3.999s] Installed /home/tora/soft_ws/build/rover_description
+[3.999s] running symlink_data
+[4.000s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/_d435.gazebo.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[4.000s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/rover_realsense.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[4.000s] symbolically linking /home/tora/soft_ws/build/rover_description/meshes/d435.dae -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[4.027s] Invoked command in '/home/tora/soft_ws/build/rover_description' returned '0': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/rover_description/build --no-deps symlink_data

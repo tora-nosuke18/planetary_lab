@@ -1,0 +1,30 @@
+[2.851s] Invoking command in '/home/tora/soft_ws/build/visual_odom': PYTHONPATH=/home/tora/soft_ws/build/visual_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/tora/soft_ws/build/visual_odom/build
+[3.121s] running develop
+[3.291s] Removing /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual-odom.egg-link (link to .)
+[3.317s] Invoked command in '/home/tora/soft_ws/build/visual_odom' returned '0': PYTHONPATH=/home/tora/soft_ws/build/visual_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/tora/soft_ws/build/visual_odom/build
+[3.318s] Invoking command in '/home/tora/soft_ws/src/visual_odom': PYTHONPATH=/home/tora/soft_ws/build/visual_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/visual_odom build --build-base /home/tora/soft_ws/build/visual_odom/build install --record /home/tora/soft_ws/build/visual_odom/install.log --single-version-externally-managed install_data --force
+[3.660s] running egg_info
+[3.661s] writing ../../build/visual_odom/visual_odom.egg-info/PKG-INFO
+[3.661s] writing dependency_links to ../../build/visual_odom/visual_odom.egg-info/dependency_links.txt
+[3.661s] writing entry points to ../../build/visual_odom/visual_odom.egg-info/entry_points.txt
+[3.661s] writing requirements to ../../build/visual_odom/visual_odom.egg-info/requires.txt
+[3.661s] writing top-level names to ../../build/visual_odom/visual_odom.egg-info/top_level.txt
+[3.662s] reading manifest file '../../build/visual_odom/visual_odom.egg-info/SOURCES.txt'
+[3.663s] writing manifest file '../../build/visual_odom/visual_odom.egg-info/SOURCES.txt'
+[3.663s] running build
+[3.663s] running build_py
+[3.663s] running install
+[3.663s] running install_lib
+[3.664s] creating /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom
+[3.664s] copying /home/tora/soft_ws/build/visual_odom/build/lib/visual_odom/__init__.py -> /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom
+[3.664s] byte-compiling /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom/__init__.py to __init__.cpython-310.pyc
+[3.665s] running install_data
+[3.665s] copying resource/visual_odom -> /home/tora/soft_ws/install/visual_odom/share/ament_index/resource_index/packages
+[3.665s] copying package.xml -> /home/tora/soft_ws/install/visual_odom/share/visual_odom
+[3.665s] copying launch/visual_odom.launch.xml -> /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch
+[3.665s] copying launch/gazebo_navigation.launch.py -> /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch
+[3.665s] copying launch/stereo_slam.launch.py -> /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch
+[3.666s] running install_egg_info
+[3.667s] Copying ../../build/visual_odom/visual_odom.egg-info to /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom-0.0.0-py3.10.egg-info
+[3.668s] running install_scripts
+[3.684s] writing list of installed files to '/home/tora/soft_ws/build/visual_odom/install.log'

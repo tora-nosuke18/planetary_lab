@@ -1,0 +1,31 @@
+[5.127s] Invoking command in '/home/tora/soft_ws/build/visual_odom': PYTHONPATH=/home/tora/soft_ws/build/visual_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/tora/soft_ws/build/visual_odom/build
+[5.886s] running develop
+[6.344s] Removing /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual-odom.egg-link (link to .)
+[6.396s] Invoked command in '/home/tora/soft_ws/build/visual_odom' returned '0': PYTHONPATH=/home/tora/soft_ws/build/visual_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/tora/soft_ws/build/visual_odom/build
+[6.400s] Invoking command in '/home/tora/soft_ws/src/visual_odom': PYTHONPATH=/home/tora/soft_ws/build/visual_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/visual_odom build --build-base /home/tora/soft_ws/build/visual_odom/build install --record /home/tora/soft_ws/build/visual_odom/install.log --single-version-externally-managed install_data --force
+[7.128s] running egg_info
+[7.129s] writing ../../build/visual_odom/visual_odom.egg-info/PKG-INFO
+[7.130s] writing dependency_links to ../../build/visual_odom/visual_odom.egg-info/dependency_links.txt
+[7.130s] writing entry points to ../../build/visual_odom/visual_odom.egg-info/entry_points.txt
+[7.130s] writing requirements to ../../build/visual_odom/visual_odom.egg-info/requires.txt
+[7.130s] writing top-level names to ../../build/visual_odom/visual_odom.egg-info/top_level.txt
+[7.133s] reading manifest file '../../build/visual_odom/visual_odom.egg-info/SOURCES.txt'
+[7.135s] writing manifest file '../../build/visual_odom/visual_odom.egg-info/SOURCES.txt'
+[7.136s] running build
+[7.136s] running build_py
+[7.136s] running install
+[7.136s] running install_lib
+[7.138s] creating /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom
+[7.138s] copying /home/tora/soft_ws/build/visual_odom/build/lib/visual_odom/__init__.py -> /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom
+[7.140s] byte-compiling /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom/__init__.py to __init__.cpython-310.pyc
+[7.140s] running install_data
+[7.140s] copying resource/visual_odom -> /home/tora/soft_ws/install/visual_odom/share/ament_index/resource_index/packages
+[7.140s] copying package.xml -> /home/tora/soft_ws/install/visual_odom/share/visual_odom
+[7.140s] copying launch/visual_odom.launch.xml -> /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch
+[7.141s] copying launch/gazebo_navigation.launch.py -> /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch
+[7.141s] copying launch/stereo_slam.launch.py -> /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch
+[7.141s] running install_egg_info
+[7.146s] Copying ../../build/visual_odom/visual_odom.egg-info to /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom-0.0.0-py3.10.egg-info
+[7.147s] running install_scripts
+[7.193s] writing list of installed files to '/home/tora/soft_ws/build/visual_odom/install.log'
+[7.243s] Invoked command in '/home/tora/soft_ws/src/visual_odom' returned '0': PYTHONPATH=/home/tora/soft_ws/build/visual_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/visual_odom build --build-base /home/tora/soft_ws/build/visual_odom/build install --record /home/tora/soft_ws/build/visual_odom/install.log --single-version-externally-managed install_data --force

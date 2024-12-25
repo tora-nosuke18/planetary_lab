@@ -1,0 +1,16 @@
+[3.044s] Invoking command in '/home/tora/soft_ws/build/visual_odom': PYTHONPATH=/home/tora/soft_ws/build/visual_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/visual_odom/build --no-deps symlink_data
+[3.314s] running develop
+[3.476s] running egg_info
+[3.477s] writing visual_odom.egg-info/PKG-INFO
+[3.477s] writing dependency_links to visual_odom.egg-info/dependency_links.txt
+[3.477s] writing entry points to visual_odom.egg-info/entry_points.txt
+[3.477s] writing requirements to visual_odom.egg-info/requires.txt
+[3.477s] writing top-level names to visual_odom.egg-info/top_level.txt
+[3.478s] reading manifest file 'visual_odom.egg-info/SOURCES.txt'
+[3.479s] writing manifest file 'visual_odom.egg-info/SOURCES.txt'
+[3.481s] running build_ext
+[3.481s] Creating /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual-odom.egg-link (link to .)
+[3.482s] 
+[3.482s] Installed /home/tora/soft_ws/build/visual_odom
+[3.482s] running symlink_data
+[3.515s] Invoked command in '/home/tora/soft_ws/build/visual_odom' returned '0': PYTHONPATH=/home/tora/soft_ws/build/visual_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/visual_odom/build --no-deps symlink_data

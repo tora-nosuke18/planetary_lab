@@ -1,0 +1,48 @@
+[2.454s] Invoking command in '/home/tora/soft_ws/build/rover_description': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/rover_description/build --no-deps symlink_data --force
+[2.740s] running develop
+[2.910s] running egg_info
+[2.910s] writing rover_description.egg-info/PKG-INFO
+[2.910s] writing dependency_links to rover_description.egg-info/dependency_links.txt
+[2.910s] writing entry points to rover_description.egg-info/entry_points.txt
+[2.910s] writing requirements to rover_description.egg-info/requires.txt
+[2.916s] writing top-level names to rover_description.egg-info/top_level.txt
+[2.917s] reading manifest file 'rover_description.egg-info/SOURCES.txt'
+[2.918s] writing manifest file 'rover_description.egg-info/SOURCES.txt'
+[2.920s] running build_ext
+[2.920s] Creating /home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages/rover-description.egg-link (link to .)
+[2.921s] 
+[2.921s] Installed /home/tora/soft_ws/build/rover_description
+[2.921s] running symlink_data
+[2.921s] symbolically linking /home/tora/soft_ws/build/rover_description/resource/rover_description -> /home/tora/soft_ws/install/rover_description/share/ament_index/resource_index/packages
+[2.921s] symbolically linking /home/tora/soft_ws/build/rover_description/package.xml -> /home/tora/soft_ws/install/rover_description/share/rover_description
+[2.921s] symbolically linking /home/tora/soft_ws/build/rover_description/launch/nav2_rviz.launch.py -> /home/tora/soft_ws/install/rover_description/share/rover_description/launch
+[2.921s] symbolically linking /home/tora/soft_ws/build/rover_description/launch/display.launch.py -> /home/tora/soft_ws/install/rover_description/share/rover_description/launch
+[2.921s] symbolically linking /home/tora/soft_ws/build/rover_description/launch/spawn_rover.launch.py -> /home/tora/soft_ws/install/rover_description/share/rover_description/launch
+[2.921s] symbolically linking /home/tora/soft_ws/build/rover_description/launch/gazebo.launch.py -> /home/tora/soft_ws/install/rover_description/share/rover_description/launch
+[2.921s] symbolically linking /home/tora/soft_ws/build/rover_description/launch/gazebo_world.launch.py -> /home/tora/soft_ws/install/rover_description/share/rover_description/launch
+[2.921s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/rover.trans -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[2.922s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/materials.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[2.922s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/rover_description.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[2.922s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/diff_control.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[2.922s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/rover.urdf -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[2.922s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/realsense.urdf -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[2.922s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/_d435.gazebo.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[2.922s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/rover.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[2.922s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/rover_realsense.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[2.922s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/rover.gazebo -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[2.922s] symbolically linking /home/tora/soft_ws/build/rover_description/urdf/_d435.urdf.xacro -> /home/tora/soft_ws/install/rover_description/share/rover_description/urdf
+[2.922s] symbolically linking /home/tora/soft_ws/build/rover_description/meshes/chassis_left_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[2.923s] symbolically linking /home/tora/soft_ws/build/rover_description/meshes/d435.dae -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[2.923s] symbolically linking /home/tora/soft_ws/build/rover_description/meshes/wheel_right_front_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[2.923s] symbolically linking /home/tora/soft_ws/build/rover_description/meshes/wheel_right_back_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[2.923s] symbolically linking /home/tora/soft_ws/build/rover_description/meshes/chassis_right_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[2.923s] symbolically linking /home/tora/soft_ws/build/rover_description/meshes/base_link.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[2.923s] symbolically linking /home/tora/soft_ws/build/rover_description/meshes/wheel_left_front_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[2.923s] symbolically linking /home/tora/soft_ws/build/rover_description/meshes/wheel_left_back_1.stl -> /home/tora/soft_ws/install/rover_description/share/rover_description/meshes
+[2.923s] symbolically linking /home/tora/soft_ws/build/rover_description/config/display.rviz -> /home/tora/soft_ws/install/rover_description/share/rover_description/config
+[2.923s] symbolically linking /home/tora/soft_ws/build/rover_description/config/diff_robot.yaml -> /home/tora/soft_ws/install/rover_description/share/rover_description/config
+[2.923s] symbolically linking /home/tora/soft_ws/build/rover_description/config/rover_nav2.rviz -> /home/tora/soft_ws/install/rover_description/share/rover_description/config
+[2.924s] symbolically linking /home/tora/soft_ws/build/rover_description/world/display.world -> /home/tora/soft_ws/install/rover_description/share/rover_description/world
+[2.924s] symbolically linking /home/tora/soft_ws/build/rover_description/models/term3_rover/model.sdf -> /home/tora/soft_ws/install/rover_description/share/rover_description/models
+[2.924s] symbolically linking /home/tora/soft_ws/build/rover_description/models/term3_rover/model.config -> /home/tora/soft_ws/install/rover_description/share/rover_description/models
+[2.957s] Invoked command in '/home/tora/soft_ws/build/rover_description' returned '0': PYTHONPATH=/home/tora/soft_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/rover_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/rover_description/build --no-deps symlink_data --force

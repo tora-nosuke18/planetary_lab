@@ -1,0 +1,20 @@
+<launch>
+    <!-- 速度指令の送信 -->
+        <!-- キーボード操作 -->
+    <!-- <node pkg="teleop_twist_keyboard" exec="teleop_twist_keyboard" name="teleop" output="screen" launch-prefix="xterm -e" />   -->
+        <!-- ジョイコン操作 -->
+    <node pkg="joy" exec="joy_node" name="joy"/>
+    <node pkg="controller" exec="teleop_joy_control" name="teleop_joy_control"/>
+      <!-- 速度指令から各モーターへ目標速度を送信 -->
+    <!-- <node pkg="controller" exec="rover" name="twist_to_rover"> 
+      <param name="tread" value="0.5"/>
+    </node>     -->
+
+    <!-- <node pkg="controller" exec="wheel_ctl_serial_master" name="wheel_ctl_serial_master" /> -->
+
+    <!-- <node pkg="controller" exec="odom_calc" name="odom_calc" /> -->
+
+    <!-- <include file="$(find-pkg-share bno055)/launch/bno055.launch.py"/>              IMUの取得 -->
+
+</launch>
+

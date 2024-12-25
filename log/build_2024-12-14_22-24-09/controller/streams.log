@@ -1,0 +1,23 @@
+[2.438s] Invoking command in '/home/tora/soft_ws/build/controller': PYTHONPATH=/home/tora/soft_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/controller/build --no-deps symlink_data --force
+[2.743s] running develop
+[2.913s] running egg_info
+[2.913s] writing controller.egg-info/PKG-INFO
+[2.913s] writing dependency_links to controller.egg-info/dependency_links.txt
+[2.913s] writing entry points to controller.egg-info/entry_points.txt
+[2.913s] writing requirements to controller.egg-info/requires.txt
+[2.913s] writing top-level names to controller.egg-info/top_level.txt
+[2.915s] reading manifest file 'controller.egg-info/SOURCES.txt'
+[2.915s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[2.917s] running build_ext
+[2.917s] Creating /home/tora/soft_ws/install/controller/lib/python3.10/site-packages/controller.egg-link (link to .)
+[2.918s] Installing odom_calc script to /home/tora/soft_ws/install/controller/lib/controller
+[2.918s] Installing rover script to /home/tora/soft_ws/install/controller/lib/controller
+[2.918s] Installing teleop_joy_control script to /home/tora/soft_ws/install/controller/lib/controller
+[2.918s] Installing wheel_ctl_serial_master script to /home/tora/soft_ws/install/controller/lib/controller
+[2.918s] 
+[2.918s] Installed /home/tora/soft_ws/build/controller
+[2.918s] running symlink_data
+[2.918s] symbolically linking /home/tora/soft_ws/build/controller/resource/controller -> /home/tora/soft_ws/install/controller/share/ament_index/resource_index/packages
+[2.918s] symbolically linking /home/tora/soft_ws/build/controller/package.xml -> /home/tora/soft_ws/install/controller/share/controller
+[2.918s] symbolically linking /home/tora/soft_ws/build/controller/launch/simple_run.launch.xml -> /home/tora/soft_ws/install/controller/share/controller/launch
+[2.938s] Invoked command in '/home/tora/soft_ws/build/controller' returned '0': PYTHONPATH=/home/tora/soft_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tora/soft_ws/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/tora/soft_ws/build/controller/build --no-deps symlink_data --force

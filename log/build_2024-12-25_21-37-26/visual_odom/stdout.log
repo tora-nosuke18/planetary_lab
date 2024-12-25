@@ -1,0 +1,27 @@
+running develop
+Removing /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual-odom.egg-link (link to .)
+running egg_info
+writing ../../build/visual_odom/visual_odom.egg-info/PKG-INFO
+writing dependency_links to ../../build/visual_odom/visual_odom.egg-info/dependency_links.txt
+writing entry points to ../../build/visual_odom/visual_odom.egg-info/entry_points.txt
+writing requirements to ../../build/visual_odom/visual_odom.egg-info/requires.txt
+writing top-level names to ../../build/visual_odom/visual_odom.egg-info/top_level.txt
+reading manifest file '../../build/visual_odom/visual_odom.egg-info/SOURCES.txt'
+writing manifest file '../../build/visual_odom/visual_odom.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+creating /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom
+copying /home/tora/soft_ws/build/visual_odom/build/lib/visual_odom/__init__.py -> /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom
+byte-compiling /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/visual_odom -> /home/tora/soft_ws/install/visual_odom/share/ament_index/resource_index/packages
+copying package.xml -> /home/tora/soft_ws/install/visual_odom/share/visual_odom
+copying launch/gazebo_vslam.launch.py -> /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch
+copying launch/visual_odom.launch.xml -> /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch
+copying launch/stereo_slam.launch.py -> /home/tora/soft_ws/install/visual_odom/share/visual_odom/launch
+running install_egg_info
+Copying ../../build/visual_odom/visual_odom.egg-info to /home/tora/soft_ws/install/visual_odom/lib/python3.10/site-packages/visual_odom-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/tora/soft_ws/build/visual_odom/install.log'
