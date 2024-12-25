@@ -24,12 +24,6 @@ def generate_launch_description():
             launch_arguments ={'params_file' :[params_file]}.items()
         )
     
-    slam = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory('slam_toolbox'), 'launch'),
-                '/online_async_launch.py'])
-        )
-    
     localization  =  Node(
             package='robot_localization',
             executable='ekf_node',

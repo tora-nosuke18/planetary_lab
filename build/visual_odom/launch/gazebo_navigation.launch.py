@@ -1,1 +1,0 @@
-/home/tora/soft_ws/src/visual_odom/launch/gazebo_navigation.launch.py

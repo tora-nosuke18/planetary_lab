@@ -1,1 +1,0 @@
-/home/tora/soft_ws/src/rover_description/launch/spawn_rover.launch.py
