@@ -94,7 +94,7 @@ aluminum peripherial evaluation case.
     <link name="${name}_depth_optical_frame"/>
       
     <!-- camera left IR joints and links -->
-    <joint name="${name}_left_ir_joint" type="fixed">
+    <!-- <joint name="${name}_left_ir_joint" type="fixed">
       <origin xyz="0 ${d435_cam_depth_to_left_ir_offset} 0" rpy="0 0 0" />
       <parent link="${name}_depth_frame" />
       <child link="${name}_left_ir_frame" />
@@ -106,10 +106,10 @@ aluminum peripherial evaluation case.
       <parent link="${name}_left_ir_frame" />
       <child link="${name}_left_ir_optical_frame" />
     </joint>
-    <link name="${name}_left_ir_optical_frame"/>
+    <link name="${name}_left_ir_optical_frame"/> -->
 
     <!-- camera right IR joints and links -->
-    <joint name="${name}_right_ir_joint" type="fixed">
+    <!-- <joint name="${name}_right_ir_joint" type="fixed">
       <origin xyz="0 ${d435_cam_depth_to_right_ir_offset} 0" rpy="0 0 0" />
       <parent link="${name}_depth_frame" />
       <child link="${name}_right_ir_frame" />
@@ -121,7 +121,7 @@ aluminum peripherial evaluation case.
       <parent link="${name}_right_ir_frame" />
       <child link="${name}_right_ir_optical_frame" />
     </joint>
-    <link name="${name}_right_ir_optical_frame"/>
+    <link name="${name}_right_ir_optical_frame"/> -->
 
     <!-- camera color joints and links -->
     <joint name="${name}_color_joint" type="fixed">
@@ -137,6 +137,21 @@ aluminum peripherial evaluation case.
       <child link="${name}_color_optical_frame" />
     </joint>
     <link name="${name}_color_optical_frame"/>
+
+
+    <joint name="${name}_left_ir_optical_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
+      <parent link="${parent}" />
+      <child link="${name}_left_ir_optical_frame" />
+    </joint>
+    <link name="${name}_left_ir_optical_frame"/>
+
+    <joint name="${name}_right_ir_optical_joint" type="fixed">
+      <origin xyz="0 -0.05 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
+      <parent link="${parent}" />
+      <child link="${name}_right_ir_optical_frame" />
+    </joint>
+    <link name="${name}_right_ir_optical_frame"/>
 
     <!-- Realsense Gazebo Plugin -->
     <xacro:gazebo_d435 camera_name="${name}" topics_ns="stereo_camera" depth_optical_frame="${name}_depth_optical_frame" color_optical_frame="${name}_color_optical_frame" infrared1_optical_frame="${name}_left_ir_optical_frame" infrared2_optical_frame="${name}_right_ir_optical_frame" publish_pointcloud="${publish_pointcloud}"/>

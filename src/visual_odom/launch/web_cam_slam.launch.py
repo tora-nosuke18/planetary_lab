@@ -52,32 +52,44 @@ def generate_launch_description():
 
     remappings = [
         ('odom', '/visual_odom'),
-        ('left/image_rect', '/stereo_camera/left/image_rect'),
-        ('left/camera_info', '/stereo_camera/left/camera_info'),
-        ('right/image_rect', '/stereo_camera/right/image_rect'),
-        ('right/camera_info', '/stereo_camera/right/camera_info')
+        ('left/image_rect', '/stereo_camera/infra1/image_rect'),
+        ('left/camera_info', '/stereo_camera/infra1/camera_info'),
+        ('right/image_rect', '/stereo_camera/infra2/image_rect'),
+        ('right/camera_info', '/stereo_camera/infra2/camera_info')
     ]
 
 
     return LaunchDescription([      
+        Node(
+            package='v4l2_camera', executable='v4l2_camera_node',name='left_cam_node',
+            namespace='/web_camera/left',
+            parameters=[{'video_device': '/dev/video0'}]
+            ),
+
+        Node(
+            package='v4l2_camera', executable='v4l2_camera_node',name='right_cam_node',
+            namespace='/web_camera/right',
+            parameters=[{'video_device': '/dev/video2'}]
+            ),
+
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([stereo_image_proc_launch]),
             launch_arguments=[
-                ('left_namespace', 'stereo_camera/left'),
-                ('right_namespace', 'stereo_camera/right'),
+                ('left_namespace', 'web_camera/left'),
+                ('right_namespace', 'web_camera/right'),
                 ('disparity_range', '256'),
             ]
         ),
     
-        Node(
-            package='rtabmap_odom', executable='stereo_odometry', 
-            parameters=[stereo_odometry_params],  # List format
-            remappings=remappings
-        ),
+        # Node(
+        #     package='rtabmap_odom', executable='stereo_odometry', 
+        #     parameters=[stereo_odometry_params],  # List format
+        #     remappings=remappings
+        # ),
 
-        Node(
-            package='rtabmap_slam', executable='rtabmap', output='screen',
-            parameters=[rtabmap_params],  # List format
-            remappings=remappings,
-        ),
+        # Node(
+        #     package='rtabmap_slam', executable='rtabmap', output='screen',
+        #     parameters=[rtabmap_params],  # List format
+        #     remappings=remappings,
+        # ),
     ])
