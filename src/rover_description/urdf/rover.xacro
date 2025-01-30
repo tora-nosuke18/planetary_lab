@@ -7,6 +7,6 @@
 
   <xacro:include filename="$(find rover_description)/urdf/diff_control.xacro" />
 
-  <xacro:include filename="$(find rover_description)/urdf/rover_camera.xacro" />
+  <xacro:include filename="$(find rover_description)/urdf/rgbd.gazebo.xacro" />
 
 </robot>

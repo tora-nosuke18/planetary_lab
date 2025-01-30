@@ -52,10 +52,10 @@ def generate_launch_description():
 
     remappings = [
         ('odom', '/visual_odom'),
-        ('left/image_rect', '/stereo_camera/left/image_rect'),
-        ('left/camera_info', '/stereo_camera/left/camera_info'),
-        ('right/image_rect', '/stereo_camera/right/image_rect'),
-        ('right/camera_info', '/stereo_camera/right/camera_info')
+        ('left/image_rect', '/infra1/image_raw'),
+        ('left/camera_info', '/infra1/camera_info'),
+        ('right/image_rect', '/infra2/image_raw'),
+        ('right/camera_info', '/infra2/camera_info')
     ]
 
 
@@ -63,8 +63,8 @@ def generate_launch_description():
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([stereo_image_proc_launch]),
             launch_arguments=[
-                ('left_namespace', 'stereo_camera/left'),
-                ('right_namespace', 'stereo_camera/right'),
+                # ('left_namespace', 'stereo_camera/left'),
+                # ('right_namespace', 'stereo_camera/right'),
                 ('disparity_range', '256'),
             ]
         ),

@@ -10,8 +10,8 @@ controller_manager:
 
 diff_drive_controller:
   ros__parameters:
-    left_wheel_names: ["left_front"]
-    right_wheel_names: ["right_front"]
+    left_wheel_names: ["left_front", "left_back"]
+    right_wheel_names: ["right_front", "right_back"]
 
     use_stamped_vel: false
 

@@ -1,19 +1,13 @@
-<?xml version="1.0"?>
-
-<!--
-License: Apache 2.0. See LICENSE file in root directory.
-Copyright(c) 2017 PAL Robotics, S.L. All Rights Reserved
-
-This is the Gazebo URDF model for the Intel RealSense D435 camera
--->
-  
+<?xml version="1.0"?>  
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  
-  <xacro:macro name="gazebo_d435" params="topics_ns" >
+<xacro:macro name="gazebo_d435" params="topics_ns" >
 
     <!-- Load parameters to model's main link-->
     <xacro:property name="deg_to_rad" value="0.01745329251994329577" />
     <gazebo reference="stereo_camera_left_frame">
+      <gazebo reference="link1">
+        <material>Gazebo/Orange</material>
+      </gazebo>
       <sensor name="stereo_camera_left" type="camera">
         <camera name="stereo_camera_left">
           <horizontal_fov>${85.2*deg_to_rad}</horizontal_fov>

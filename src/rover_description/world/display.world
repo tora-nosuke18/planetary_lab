@@ -16,6 +16,5 @@
       <static>true</static>
       <pose>-170 295 0.1 0 0 -4.71</pose>
     </include>
-
   </world>
 </sdf>
