@@ -12,6 +12,7 @@ class Rover(Node):
         super().__init__("rover")
         self.log = self.get_logger()
         self.declare_parameter('tread', 0.5)
+        self.declare_parameter('wheel_radius', 0.25)
 
         self.targets_pub = self.create_publisher(Float64MultiArray, "/rover/targets", 1)
 
@@ -21,18 +22,16 @@ class Rover(Node):
         wheel_msg = Float64MultiArray()
 
         tread = self.get_parameter('tread').get_parameter_value()._double_value
+        wheel_radius = self.get_parameter('wheel_radius').get_parameter_value()._double_value
 
-        left_wheel = twist.linear.x - twist.angular.z * 0.5 * tread
-        right_wheel = twist.linear.x + twist.angular.z * 0.5 * tread    
+        left_wheel = (twist.linear.x - twist.angular.z * 0.5 * tread) / wheel_radius
+        right_wheel = (twist.linear.x + twist.angular.z * 0.5 * tread) / wheel_radius   
 
         wheel_msg.data = [left_wheel, left_wheel, -right_wheel, -right_wheel] 
 
         self.targets_pub.publish(wheel_msg)
 
         self.log.info(f'targets : {wheel_msg.data} m/s')
-
-        # self.log.info(f'Left wheel velocity : {left_wheel:.2f} m/s')
-
 
 def main():
     rclpy.init()
