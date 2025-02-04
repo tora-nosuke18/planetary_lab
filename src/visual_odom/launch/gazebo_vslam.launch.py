@@ -56,4 +56,9 @@ def generate_launch_description():
             remappings=remappings,  # This will delete the previous database
             arguments=['--delete_db_on_start'],
         ),
+
+        # Node(
+        #     package='rtabmap_viz', executable='rtabmap_viz', output='screen',
+        #     parameters=[rtabmap_params],
+        #     remappings=remappings),
     ])
