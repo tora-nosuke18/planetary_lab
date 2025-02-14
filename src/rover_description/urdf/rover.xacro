@@ -9,4 +9,5 @@
 
   <xacro:include filename="$(find rover_description)/urdf/rgbd.gazebo.xacro" />
 
+  <xacro:include filename="$(find rover_description)/urdf/imu.gazebo.xacro" />
 </robot>
