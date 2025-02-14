@@ -21,7 +21,7 @@ def generate_launch_description():
             PythonLaunchDescriptionSource([os.path.join(
                 get_package_share_directory('nav2_bringup'), 'launch'),
                 '/navigation_launch.py']),
-            launch_arguments ={'params_file' :[params_file]}.items()
+            launch_arguments ={'params_file' :[params_file],'use_sim_time': "True"}.items(),        # we must set use_sim_time to True
         )
     
     localization  =  Node(
