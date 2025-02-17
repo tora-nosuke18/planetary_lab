@@ -3,13 +3,16 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     stereo_odometry_params = {
-        'frame_id': 'base_link',
-        'odom_frame_id': 'visual_odom',
-        'publish_tf': True,
+        'frame_id': 'base_link',        #VO固有のフレーム
+        'odom_frame_id': 'visual_odom',        #カメラの設置位置のオフセットを設定
+        'nitial_pose' : '0.35 0.0 0.4 0.0 0.0 0.0',        # a superimportant parameter, when we fuse sensor data with ekf nodes.
+        'odom_guess_frame_id': 'odom',
+        'publish_null_when_lost': False,
+        'publish_tf': False,        #VOのみの場合はTrue
         'queue_size': 10,
         'approx_sync': False,
         'use_sim_time' : True,
-        # 'wait_for_transform': True,
+        'wait_for_transform': 0.0,
         'Stereo/MaxDisparity': "256",
         'Stereo/MinDisparity' : "0" ,
         'OdomF2M/MaxSize': '1000',
@@ -19,7 +22,7 @@ def generate_launch_description():
     }
 
     rtabmap_params = {
-        'odom_frame_id': "visual_odom",
+        'odom_frame_id': "odom",        #VOのみの場合はvisual_odomを指定
         'subscribe_stereo': False,
         'subscribe_depth': True,
         'approx_sync': False,
@@ -50,8 +53,15 @@ def generate_launch_description():
 
     }
 
-    remappings = [
+    rgbd_odom_remappings = [
         ('odom', '/visual/odom'),
+        ('rgb/image', 'color/image_raw'),
+        ('rgb/camera_info', 'color/camera_info'),
+        ('depth/image', 'depth/depth/image_raw'),
+    ]
+
+    rtabmap_remappings = [
+        ('odom', '/odometry/filtered'),        #VOのみの場合は/visual/odomを指定
         ('rgb/image', 'color/image_raw'),
         ('rgb/camera_info', 'color/camera_info'),
         ('depth/image', 'depth/depth/image_raw'),
@@ -61,22 +71,20 @@ def generate_launch_description():
         Node(
             package='rtabmap_odom', executable='rgbd_odometry', 
             parameters=[stereo_odometry_params],  # List format
-            remappings=remappings,
+            remappings=rgbd_odom_remappings,
         ),
 
         Node(
             package='rtabmap_slam', executable='rtabmap', output='screen',
             parameters=[rtabmap_params],  # List format
-            remappings=remappings, 
+            remappings=rtabmap_remappings, 
             arguments=['--delete_db_on_start'], # This will delete the previous database
         ),
 
-<<<<<<< HEAD
         # Node(
         #     package='rtabmap_viz', executable='rtabmap_viz', output='screen',
         #     parameters=[rtabmap_params],
         #     remappings=remappings),
-=======
 
         # create segmented point cloud
         # while rtabmap_slam provides with octomap_ground & octomap_obstacles, following nodes are able to adjust the point cloud parameters.
@@ -84,7 +92,7 @@ def generate_launch_description():
         Node(
             package='rtabmap_util', executable='point_cloud_xyz', output='screen',
             parameters=[depth_to_cloud_params],  # List format
-            remappings=remappings, 
+            remappings=rtabmap_remappings, 
         ),
 
         Node(
@@ -93,5 +101,4 @@ def generate_launch_description():
             # remappings=remappings, 
         ),
 
->>>>>>> ba00dfa (miscellaneous changes)
     ])
