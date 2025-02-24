@@ -21,7 +21,7 @@ def generate_launch_description():
                 get_package_share_directory('navigation'), 'params'),
                            '/ekf.yaml']
     )
-    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+    use_sim_time = LaunchConfiguration('use_sim_time', default="True")
 
 
     return LaunchDescription([
@@ -38,5 +38,12 @@ def generate_launch_description():
             name='ekf_filter_node',
             output='screen',
             parameters=[ekf_params, {'use_sim_time': use_sim_time}],
-           )
+           ),
+
+        Node(
+            package='navigation',
+            executable='odom_base_broadcaster',
+            name='odom_base_broadcaster',
+            output='screen',
+        ),
     ])

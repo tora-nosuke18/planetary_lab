@@ -25,11 +25,11 @@ def generate_launch_description():
             )
         ),
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(navigation_cmd, 'launch', 'navigation.launch.py')
-            )
-        ),
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource(
+        #         os.path.join(navigation_cmd, 'launch', 'navigation.launch.py')
+        #     )
+        # ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(

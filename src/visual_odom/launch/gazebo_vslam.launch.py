@@ -22,11 +22,13 @@ def generate_launch_description():
     }
 
     rtabmap_params = {
-        'odom_frame_id': "odom",        #VOのみの場合はvisual_odomを指定
+        #VOのみの場合はvisual_odomを指定
+        'odom_frame_id': "odom", 
+        # 'odom_frame_id': "visual_odom",
         'subscribe_stereo': False,
         'subscribe_depth': True,
         'approx_sync': False,
-        'wait_for_transform_duration': 0.2,
+        'wait_for_transform_duration': 0.0,
         'map_always_update': True,
         'queue_size': 10,
         'use_sim_time' : True,
@@ -50,6 +52,7 @@ def generate_launch_description():
     obstacles_detection_params = {
         'queue_size': 10,
         'frame_id': 'base_link',
+        'max_obstacles_height': 1.5
 
     }
 
@@ -61,7 +64,7 @@ def generate_launch_description():
     ]
 
     rtabmap_remappings = [
-        ('odom', '/odometry/filtered'),        #VOのみの場合は/visual/odomを指定
+        ('odom', '/odometry/filtered'),        #VOのみの場合は/visual/odomを指定,ekf起動時は/odometry/filteredを指定
         ('rgb/image', 'color/image_raw'),
         ('rgb/camera_info', 'color/camera_info'),
         ('depth/image', 'depth/depth/image_raw'),

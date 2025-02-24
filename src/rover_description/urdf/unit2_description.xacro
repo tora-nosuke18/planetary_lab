@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+<robot name="rover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.005646022520213884 0.004324692924110668 0.3402746744737085" rpy="0 0 0"/>
+    <mass value="65.23623848373786"/>
+    <inertia ixx="0.567014" iyy="0.436762" izz="0.798116" ixy="0.000336" iyz="-0.002476" ixz="0.001404"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="unit2_wheel_4">
+  <inertial>
+    <origin xyz="2.45107177226922e-06 0.02183776993083497 3.1440379031563714e-05" rpy="0 0 0"/>
+    <mass value="6.911187781679159"/>
+    <inertia ixx="0.014131" iyy="0.024939" izz="0.014137" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.200297 -0.251563 -0.095759" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_wheel_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="0.200297 -0.251563 -0.095759" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_wheel_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="unit2_wheel_3">
+  <inertial>
+    <origin xyz="-1.7687732532245537e-06 0.008837769930836847 -3.1592880943412394e-05" rpy="0 0 0"/>
+    <mass value="6.911187781679159"/>
+    <inertia ixx="0.014131" iyy="0.024939" izz="0.014137" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.188382 -0.264563 -0.082386" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_wheel_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="-0.188382 -0.264563 -0.082386" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_wheel_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="unit2_left_chasis_1">
+  <inertial>
+    <origin xyz="-0.004068366885046265 -0.03722286410408038 -0.11860909800229044" rpy="0 0 0"/>
+    <mass value="5.421706715615539"/>
+    <inertia ixx="0.03316" iyy="0.162357" izz="0.137703" ixy="0.000165" iyz="0.004793" ixz="0.003604"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.251563 -0.262211" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_left_chasis_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.251563 -0.262211" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_left_chasis_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="unit2_right_chasis_1">
+  <inertial>
+    <origin xyz="-1.0909547290542968e-05 0.033723400580999874 -0.1186552661453999" rpy="0 0 0"/>
+    <mass value="5.421698800511676"/>
+    <inertia ixx="0.033022" iyy="0.162343" izz="0.137827" ixy="0.0" iyz="-0.004796" ixz="-4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.248437 -0.262211" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_right_chasis_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.248437 -0.262211" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_right_chasis_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="unit2_wheel_1">
+  <inertial>
+    <origin xyz="-2.956782252297452e-05 -0.021837261799971974 -9.75136553198197e-06" rpy="0 0 0"/>
+    <mass value="6.911187781679159"/>
+    <inertia ixx="0.014137" iyy="0.024939" izz="0.014131" ixy="0.0" iyz="0.0" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.194454 0.251937 -0.08897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="-0.194454 0.251937 -0.08897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="unit2_wheel_2">
+  <inertial>
+    <origin xyz="-3.0297475123258755e-05 -0.008837261799973906 -9.751365525320632e-06" rpy="0 0 0"/>
+    <mass value="6.911187781679159"/>
+    <inertia ixx="0.014137" iyy="0.024939" izz="0.014131" ixy="0.0" iyz="0.0" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.194454 0.264937 -0.08897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="0.194454 0.264937 -0.08897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rover_description)/meshes/unit2_wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="left_back" type="continuous">
+  <origin xyz="-0.200297 0.0 -0.166452" rpy="0 0 0"/>
+  <parent link="unit2_left_chasis_1"/>
+  <child link="unit2_wheel_4"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="left_front" type="continuous">
+  <origin xyz="0.188382 0.013 -0.179825" rpy="0 0 0"/>
+  <parent link="unit2_left_chasis_1"/>
+  <child link="unit2_wheel_3"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="left_chasis" type="fixed">
+  <origin xyz="0.0 0.251563 0.262211" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="unit2_left_chasis_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+  <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="right_chasis" type="fixed">
+  <origin xyz="0.0 -0.248437 0.262211" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="unit2_right_chasis_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+  <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="right_front" type="continuous">
+  <origin xyz="0.194454 -0.0035 -0.173241" rpy="0 0 0"/>
+  <parent link="unit2_right_chasis_1"/>
+  <child link="unit2_wheel_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="right_back" type="continuous">
+  <origin xyz="-0.194454 -0.0165 -0.173241" rpy="0 0 0"/>
+  <parent link="unit2_right_chasis_1"/>
+  <child link="unit2_wheel_2"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<!-- camera -->
+<link name="camera_link"/>
+<link name="depth_link"/>
+
+<joint name="base_to_camera" type="fixed">
+  <origin xyz="0.1 0.0 0.4" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_link"/>
+</joint>
+
+<joint name="camera_to_depth" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="-1.5707 0 -1.5707"/>
+  <parent link="camera_link"/>
+  <child link="depth_link"/>
+</joint>
+
+<!-- imu -->
+<link name="imu_link">
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+  </collision>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="0.700 0.700 0.700 1.000"/>
+    </material>
+  </visual>
+  <inertial>
+    <mass value="1e-5" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+  </inertial>
+</link>
+
+<joint name="imu_joint" type="fixed">
+  <axis xyz="0 1 0" />
+  <origin xyz="0. 0.0 0.3" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="imu_link"/>
+</joint>
+
+</robot>

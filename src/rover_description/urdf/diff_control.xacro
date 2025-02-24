@@ -6,7 +6,7 @@
       <robot_sim_type>gazebo_ros2_control/GazeboSystem</robot_sim_type>
       <parameters>$(find rover_description)/config/diff_robot.yaml</parameters>
       <ros>
-        <remapping>/diff_drive_controller/cmd_vel_unstamped:=/cmd_vel</remapping>
+        <remapping>/diff_drive_controller/cmd_vel_unstamped:=/cmd_vel/filtered</remapping>
         <remapping>/diff_drive_controller/odom:=/odom</remapping>
       </ros>
     </plugin>

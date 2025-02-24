@@ -26,7 +26,8 @@ def generate_launch_description():
     # entityの初期スポーン地点
     x_pose = LaunchConfiguration('x_pose', default='0.0')
     y_pose = LaunchConfiguration('y_pose', default='0.0')
-    z_pose = LaunchConfiguration('y_pose', default='0.0')
+    z_pose = LaunchConfiguration('z_pose', default='0.0')
+    yaw_pose = LaunchConfiguration('yaw_pose',default='0.0')
     # Gazeboの起動
     gzserver_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -54,6 +55,7 @@ def generate_launch_description():
                                     '-x', x_pose,
                                     '-y', y_pose,
                                     '-z', z_pose,
+                                    '-Y' , yaw_pose,
                                    ],
                         output='screen')
 
