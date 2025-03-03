@@ -9,9 +9,15 @@ def generate_launch_description():
 
     visual_odom_cmd = get_package_share_directory('visual_odom')
     navigation_cmd = get_package_share_directory('navigation')
-    simulation_cmd = get_package_share_directory('rover_description')
+    sensors_cmd = get_package_share_directory('sensors')
 
     return LaunchDescription([
+
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(
+                os.path.join(sensors_cmd, 'launch', 'nav_sensors.launch.py')
+            )
+        ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
@@ -24,10 +30,4 @@ def generate_launch_description():
         #         os.path.join(navigation_cmd, 'launch', 'navigation.launch.py')
         #     )
         # ),
-
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(simulation_cmd, 'launch', 'nav2_rviz.launch.py')
-            )
-        ),
     ])
