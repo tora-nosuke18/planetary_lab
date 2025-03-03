@@ -22,9 +22,9 @@ def generate_launch_description():
     }
 
     imu_filter_params={
-        'stateless': 'false',
-        'use_mag': 'false',
-        'publish_tf': 'true',
+        'stateless': False,
+        'use_mag': False,
+        'publish_tf': True,
         'fixed_frame': "odom",
         'world_frame': "enu",
     }
@@ -45,7 +45,7 @@ def generate_launch_description():
                 name='imu_filter',
                 output='screen',
                 parameters=[imu_filter_params],
-                remappings=[('imu/data_raw','/camera/imu')]
+                remappings=[('imu/data_raw','/camera/camera/imu')]
         ),
 
     ])
