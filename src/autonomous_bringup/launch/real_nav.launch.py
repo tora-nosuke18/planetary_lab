@@ -12,16 +12,10 @@ def generate_launch_description():
     simulation_cmd = get_package_share_directory('rover_description')
 
     return LaunchDescription([
-            
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(simulation_cmd, 'launch', 'rgbd_gazebo.launch.py')
-            )
-        ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
-                os.path.join(visual_odom_cmd, 'launch', 'gazebo_vslam.launch.py')
+                os.path.join(visual_odom_cmd, 'launch', 'rgbd_real.launch.py')
             )
         ),
 

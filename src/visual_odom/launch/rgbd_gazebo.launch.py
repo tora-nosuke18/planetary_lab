@@ -1,7 +1,12 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
+from launch.substitutions import LaunchConfiguration
+
 
 def generate_launch_description():
+    use_sim_time = LaunchConfiguration('use_sim_time', default="True")     #実機の場合はFalse、シミュレーションの場合はTrue
+
+
     stereo_odometry_params = {
         'frame_id': 'base_link',        #VO固有のフレーム
         'odom_frame_id': 'visual_odom',        #カメラの設置位置のオフセットを設定
@@ -11,10 +16,8 @@ def generate_launch_description():
         'publish_tf': False,        #VOのみの場合はTrue
         'queue_size': 10,
         'approx_sync': False,
-        'use_sim_time' : True,
+        'use_sim_time' : use_sim_time,
         'wait_for_transform': 0.0,
-        'Stereo/MaxDisparity': "256",
-        'Stereo/MinDisparity' : "0" ,
         'OdomF2M/MaxSize': '1000',
         'GFTT/MinDistance': '10',
         'Odom/MinInliers' : "50",
@@ -31,13 +34,8 @@ def generate_launch_description():
         'wait_for_transform_duration': 0.0,
         'map_always_update': True,
         'queue_size': 10,
-        'use_sim_time' : True,
+        'use_sim_time' : use_sim_time,
         'GridGlobal/MinSize': '100',
-        # 'Vis/MinInliers': 12,
-        # 'Mem/UseOdomGravity': True,
-        # 'Optimizer/GravitySigma': 0.3,
-        # 'Vis/MaxDepth': 3.5,
-        # 'Vis/FeatureType': 8
     }
 
     depth_to_cloud_params = {

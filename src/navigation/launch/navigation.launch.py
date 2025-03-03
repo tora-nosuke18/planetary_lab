@@ -13,7 +13,7 @@ def generate_launch_description():
     nav2_params = LaunchConfiguration(
         'params', default=[os.path.join(
                 get_package_share_directory('navigation'), 'params'),
-                           '/navigation_params.yaml']
+                           '/nav2_real.yaml']
     )
 
     ekf_params = LaunchConfiguration(
@@ -29,7 +29,7 @@ def generate_launch_description():
             PythonLaunchDescriptionSource([os.path.join(
                 get_package_share_directory('nav2_bringup'), 'launch'),
                 '/navigation_launch.py']),
-            launch_arguments ={'params_file' :[nav2_params],'use_sim_time': "True"}.items(),        # we must set use_sim_time to True
+            launch_arguments ={'params_file' :[nav2_params],'use_sim_time': use_sim_time}.items(),        # we must set use_sim_time to True
         ),
     
         Node(
