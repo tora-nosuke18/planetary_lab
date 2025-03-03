@@ -11,11 +11,11 @@ def generate_launch_description():
     # Arguments for the realsense2_camera launch
     args_rs = {
         'enable_fisheye': 'false',
-        'enable_depth': 'false',
+        'enable_depth': 'true',
         'align_depth.enable': 'true',
-        'enable_color': 'false',
-        'enable_infra1': 'true',
-        'enable_infra2': 'true',
+        'enable_color': 'true',
+        'enable_infra1': 'false',
+        'enable_infra2': 'false',
         'enable_gyro': 'true' ,
         'enable_accel':'true' ,
         'unite_imu_method':'1',

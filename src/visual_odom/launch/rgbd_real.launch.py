@@ -1,103 +1,78 @@
+# Requirements:
+#   A realsense D435i
+#   Install realsense2 ros2 package (ros-$ROS_DISTRO-realsense2-camera)
+# Example:
+#   $ ros2 launch rtabmap_examples realsense_d435i_color.launch.py
+
+import os
+
+from ament_index_python.packages import get_package_share_directory
+
 from launch import LaunchDescription
-from launch_ros.actions import Node
+from launch_ros.actions import Node, SetParameter
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
+    parameters=[{
+          'frame_id':'camera_link',
+          'subscribe_depth':True,
+          'subscribe_odom_info':True,
+          'approx_sync':False,
+          'wait_imu_to_init':True}]
 
-    stereo_odometry_params = {
-        'frame_id': 'base_link',        #VO固有のフレーム
-        'odom_frame_id': 'visual_odom',        #カメラの設置位置のオフセットを設定
-        'nitial_pose' : '0.35 0.0 0.4 0.0 0.0 0.0',        # a superimportant parameter, when we fuse sensor data with ekf nodes.
-        'odom_guess_frame_id': 'odom',
-        'publish_null_when_lost': False,
-        'publish_tf': True,        #VOのみの場合はTrue
-        'queue_size': 10,
-        'approx_sync': True,
-        'approx_sync_max_interval': 0.01,
-        'use_sim_time' : False,
-        'wait_for_transform': 0.1,
-        'OdomF2M/MaxSize': '1000',
-        'GFTT/MinDistance': '10',
-        'Odom/MinInliers' : "50",
-        'Odom/ResetCountdown': "1",
-    }
+    remappings=[
+          ('imu', '/imu/data'),
+          ('rgb/image', '/camera/color/image_raw'),
+          ('rgb/camera_info', '/camera/color/camera_info'),
+          ('depth/image', '/camera/aligned_depth_to_color/image_raw')]
 
-    rtabmap_params = {
-        #VOのみの場合はvisual_odomを指定
-        'odom_frame_id': "visual_odom", 
-        # 'odom_frame_id': "visual_odom",
-        'subscribe_stereo': False,
-        'subscribe_depth': True,
-        'approx_sync': True,
-        'approx_sync_max_interval': 0.01,
-        'wait_for_transform_duration': 0.0,
-        'map_always_update': True,
-        'queue_size': 10,
-        'use_sim_time' : False,
-        'GridGlobal/MinSize': '100',
-    }
+    return LaunchDescription([
 
-    depth_to_cloud_params = {
-        'queue_size': 10,
-        'voxel_size ':0.0,
-        'decimation': 0,
-        'min_depth': 0.0,
-        'max_depth': 0.0,
+        # Launch arguments
+        DeclareLaunchArgument(
+            'unite_imu_method', default_value='2',
+            description='0-None, 1-copy, 2-linear_interpolation. Use unite_imu_method:="1" if imu topics stop being published.'),
 
-    }
+        # Make sure IR emitter is enabled
+        SetParameter(name='depth_module.emitter_enabled', value=1),
 
-    obstacles_detection_params = {
-        'queue_size': 10,
-        'frame_id': 'base_link',
-        'max_obstacles_height': 1.5
-
-    }
-
-    rgbd_odom_remappings = [
-        ('odom', '/vo'),
-        ('rgb/image', '/camera/camera/color/image_raw'),
-        ('rgb/camera_info', '/camera/camera/color/camera_info'),
-        ('depth/image', '/camera/camera/depth/image_rect_raw'),
-    ]
-
-    rtabmap_remappings = [
-        ('odom', '/vo'),        #VOのみの場合は/voを指定,ekf起動時は/odometry/filteredを指定
-        ('rgb/image', '/camera/camera/color/image_raw'),
-        ('rgb/camera_info', '/camera/camera/color/camera_info'),
-        ('depth/image', '/camera/camera/depth/image_rect_raw'),
-    ]
-
-    return LaunchDescription([      
-        Node(
-            package='rtabmap_odom', executable='rgbd_odometry', 
-            parameters=[stereo_odometry_params],  # List format
-            remappings=rgbd_odom_remappings,
-        ),
-
-        # Node(
-        #     package='rtabmap_slam', executable='rtabmap', output='screen',
-        #     parameters=[rtabmap_params],  # List format
-        #     remappings=rtabmap_remappings, 
-        #     arguments=['--delete_db_on_start'], # This will delete the previous database
-        # ),
-
-        # Node(
-        #     package='rtabmap_viz', executable='rtabmap_viz', output='screen',
-        #     parameters=[rtabmap_params],
-        #     remappings=remappings),
-
-        # create segmented point cloud
-        # while rtabmap_slam provides with octomap_ground & octomap_obstacles, following nodes are able to adjust the point cloud parameters.
-        # And obstacles topic is used for voxel and obstacle layer of costmap2d.
-        Node(
-            package='rtabmap_util', executable='point_cloud_xyz', output='screen',
-            parameters=[depth_to_cloud_params],  # List format
-            remappings=rtabmap_remappings, 
+        # Launch camera driver
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([os.path.join(
+                get_package_share_directory('realsense2_camera'), 'launch'),
+                '/rs_launch.py']),
+                launch_arguments={'camera_namespace': '',
+                                  'enable_gyro': 'true',
+                                  'enable_accel': 'true',
+                                  'unite_imu_method': LaunchConfiguration('unite_imu_method'),
+                                  'align_depth.enable': 'true',
+                                  'enable_sync': 'true',
+                                  'rgb_camera.profile': '640x360x30'}.items(),
         ),
 
         Node(
-            package='rtabmap_util', executable='obstacles_detection', output='screen',
-            parameters=[obstacles_detection_params],  # List format
-            # remappings=remappings, 
-        ),
+            package='rtabmap_odom', executable='rgbd_odometry', output='screen',
+            parameters=parameters,
+            remappings=remappings),
 
+        Node(
+            package='rtabmap_slam', executable='rtabmap', output='screen',
+            parameters=parameters,
+            remappings=remappings,
+            arguments=['-d']),
+
+        Node(
+            package='rtabmap_viz', executable='rtabmap_viz', output='screen',
+            parameters=parameters,
+            remappings=remappings),
+
+        # Compute quaternion of the IMU
+        Node(
+            package='imu_filter_madgwick', executable='imu_filter_madgwick_node', output='screen',
+            parameters=[{'use_mag': False, 
+                         'world_frame':'enu', 
+                         'publish_tf':False}],
+            remappings=[('imu/data_raw', '/camera/imu')]),
     ])
