@@ -11,21 +11,17 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
     share_dir = get_package_share_directory('rover_description')
 
-    xacro_file = os.path.join(share_dir, 'urdf', 'rover.xacro')
+    xacro_file = os.path.join(share_dir, 'urdf', 'unit2_description.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     robot_urdf = robot_description_config.toxml()
 
-    rviz_config_file = os.path.join(share_dir, 'config', 'display.rviz')
+    rviz_config_file = os.path.join(share_dir, 'config', 'rover_nav2.rviz')
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
 
     gui_arg = DeclareLaunchArgument(
         name='gui',
         default_value='True'
     )
-
-    show_gui = LaunchConfiguration('gui')
-
-
 
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
@@ -37,11 +33,10 @@ def generate_launch_description():
         ]
     )
 
-    joint_state_publisher_node = Node(
-        condition=UnlessCondition(show_gui),
-        package='joint_state_publisher',
-        executable='joint_state_publisher',
-        name='joint_state_publisher'
+    static_joint_node =Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments = ['--x', '0', '--y', '0', '--z', '0.2', '--yaw', '0', '--pitch', '0', '--roll', '0', '--frame-id', 'base_link', '--child-frame-id', 'camera_link']
     )
 
     rviz_node = Node(
@@ -55,6 +50,6 @@ def generate_launch_description():
     return LaunchDescription([
         gui_arg,
         robot_state_publisher_node,
-        joint_state_publisher_node,
+        static_joint_node,
         rviz_node
     ])
