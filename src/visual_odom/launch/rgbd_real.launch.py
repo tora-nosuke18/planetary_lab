@@ -15,14 +15,35 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
-    parameters=[{
-          'frame_id':'camera_link',
+    rgbd_odom_parameters=[{
+          'frame_id':'base_link',
           'subscribe_depth':True,
-          'subscribe_odom_info':True,
+          'subscribe_odom_info':False,
           'approx_sync':False,
-          'wait_imu_to_init':True}]
+          'wait_imu_to_init':True,
+          'publish_tf': False
+        }]
 
-    remappings=[
+    rtabmap_parameters=[{
+          'frame_id':'base_link',
+          'subscribe_depth':True,
+          'subscribe_odom_info':False,
+          'approx_sync':False,
+          'wait_imu_to_init':True,
+          'GridGlobal/MinSize': '100',
+        'wait_for_transform_duration': 0.02,
+
+        }]
+
+    rgbd_odom_remappings=[
+          ('odom', '/vo'),
+          ('imu', '/imu/data'),
+          ('rgb/image', '/camera/color/image_raw'),
+          ('rgb/camera_info', '/camera/color/camera_info'),
+          ('depth/image', '/camera/aligned_depth_to_color/image_raw')]
+
+    rtabmap_remappings=[
+          ('odom', '/odometry/filtered'),
           ('imu', '/imu/data'),
           ('rgb/image', '/camera/color/image_raw'),
           ('rgb/camera_info', '/camera/color/camera_info'),
@@ -54,19 +75,14 @@ def generate_launch_description():
 
         Node(
             package='rtabmap_odom', executable='rgbd_odometry', output='screen',
-            parameters=parameters,
-            remappings=remappings),
+            parameters=rgbd_odom_parameters,
+            remappings=rgbd_odom_remappings),
 
         Node(
             package='rtabmap_slam', executable='rtabmap', output='screen',
-            parameters=parameters,
-            remappings=remappings,
+            parameters=rtabmap_parameters,
+            remappings=rtabmap_remappings,
             arguments=['-d']),
-
-        Node(
-            package='rtabmap_viz', executable='rtabmap_viz', output='screen',
-            parameters=parameters,
-            remappings=remappings),
 
         # Compute quaternion of the IMU
         Node(

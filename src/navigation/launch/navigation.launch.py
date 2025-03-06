@@ -19,18 +19,18 @@ def generate_launch_description():
     ekf_params = LaunchConfiguration(
         'params', default=[os.path.join(
                 get_package_share_directory('navigation'), 'params'),
-                           '/ekf.yaml']
+                           '/ekf_real.yaml']
     )
-    use_sim_time = LaunchConfiguration('use_sim_time', default="True")
+    use_sim_time = LaunchConfiguration('use_sim_time', default="False")
 
 
     return LaunchDescription([
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory('nav2_bringup'), 'launch'),
-                '/navigation_launch.py']),
-            launch_arguments ={'params_file' :[nav2_params],'use_sim_time': use_sim_time}.items(),        # we must set use_sim_time to True
-        ),
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource([os.path.join(
+        #         get_package_share_directory('nav2_bringup'), 'launch'),
+        #         '/navigation_launch.py']),
+        #     launch_arguments ={'params_file' :[nav2_params],'use_sim_time': use_sim_time}.items(),        # we must set use_sim_time to True
+        # ),
     
         Node(
             package='robot_localization',
@@ -40,10 +40,10 @@ def generate_launch_description():
             parameters=[ekf_params, {'use_sim_time': use_sim_time}],
            ),
 
-        Node(
-            package='navigation',
-            executable='odom_base_broadcaster',
-            name='odom_base_broadcaster',
-            output='screen',
-        ),
+        # Node(
+        #     package='navigation',
+        #     executable='odom_base_broadcaster',
+        #     name='odom_base_broadcaster',
+        #     output='screen',
+        # ),
     ])
