@@ -14,8 +14,8 @@ class OdometryCalc(Node):
     def __init__(self):
         super().__init__('odom_calc')
 
-        self.r = 0.055  # 車輪半径
-        self.TREAD = 1  # トレッド幅
+        self.r = 0.075  # 車輪半径
+        self.TREAD = 0.2  # トレッド幅
 
         self.x = 0.0  # x座標
         self.y = 0.0  # y座標
@@ -35,24 +35,13 @@ class OdometryCalc(Node):
 
         self.odom_broadcaster = TransformBroadcaster(self)
 
-        self.create_subscription(Float64MultiArray, '/C620/actual_rad', self.enc_cb, 10)
+        self.create_subscription(Float64MultiArray, 'wheel_speed', self.enc_cb, 10) #/C620/actual_rad
         self.odom_pub = self.create_publisher(Odometry, 'odom', 10)
 
-        self.timer = self.create_timer(0.1, self.publish_odom)  # 10Hzで実行
-
-    def ecn_cb(self, msg):
+    def enc_cb(self, msg):
         # エンコーダ値を取得
-        self.get_logger().info(f"l {msg.data:.3f}")
-        self.current_left_enc = msg.data  # 左エンコーダ値
-        
-        # エンコーダ値を取得
-        self.get_logger().info(f"r {msg.data:.3f}")
-        self.current_right_enc = msg.data  # 右エンコーダ値
-    
-    def publish_odom(self):
-        # エンコーダ値を取得
-        left_enc = self.current_left_enc
-        right_enc = self.current_right_enc
+        left_enc = msg.data[0]  # 左エンコーダ値
+        right_enc = msg.data[1]  # 右エンコーダ値
 
         # 経過時間を計算
         current_time = self.get_clock().now()
@@ -68,7 +57,6 @@ class OdometryCalc(Node):
         delta_y = (self.vx * math.sin(self.th) + self.vy * math.cos(self.th)) * dt
         delta_th = self.vth * dt
 
-        self.get_logger().info(f"dt {dt:.3f}")
         self.x += delta_x
         self.y += delta_y  
         self.th += delta_th
@@ -77,32 +65,36 @@ class OdometryCalc(Node):
         odom_quat = quaternion_from_euler(0, 0, self.th)
 
         # tf変換を送信
-        odom_trans = TransformStamped()
-        odom_trans.header.stamp = current_time.to_msg()
-        odom_trans.header.frame_id = "odom"
-        odom_trans.child_frame_id = "base_link"
+        # odom_trans = TransformStamped()
+        # odom_trans.header.stamp = current_time.to_msg()
+        # odom_trans.header.frame_id = "odom"
+        # odom_trans.child_frame_id = "base_link"
 
-        odom_trans.transform.translation.x = self.x
-        odom_trans.transform.translation.y = self.y
-        odom_trans.transform.translation.z = 0.0
-        odom_trans.transform.rotation.x = odom_quat[0]
-        odom_trans.transform.rotation.y = odom_quat[1]
-        odom_trans.transform.rotation.z = odom_quat[2]
-        odom_trans.transform.rotation.w = odom_quat[3]
+        # odom_trans.transform.translation.x = self.x
+        # odom_trans.transform.translation.y = self.y
+        # odom_trans.transform.translation.z = 0.0
+        # odom_trans.transform.rotation.x = odom_quat[0]
+        # odom_trans.transform.rotation.y = odom_quat[1]
+        # odom_trans.transform.rotation.z = odom_quat[2]
+        # odom_trans.transform.rotation.w = odom_quat[3]
 
-        self.odom_broadcaster.sendTransform(odom_trans)
+        # self.odom_broadcaster.sendTransform(odom_trans)
 
         # オドメトリメッセージをROS 2で配信
         odom = Odometry()
         odom.header.stamp = current_time.to_msg()
         odom.header.frame_id = "odom"
-
-        # 位置を設定
-        odom.pose.pose = Pose(Point(self.x, self.y, 0.0), Quaternion(*odom_quat))
-
-        # 速度を設定
         odom.child_frame_id = "base_link"
-        odom.twist.twist = Twist(Vector3(self.vx, self.vy, 0.0), Vector3(0, 0, self.vth))
+
+        odom.pose.pose.position.x = self.x
+        odom.pose.pose.position.y = self.y
+        odom.pose.pose.position.z = 0.0
+        odom.pose.pose.orientation.x = odom_quat[0]
+        odom.pose.pose.orientation.y = odom_quat[1]
+        odom.pose.pose.orientation.z = odom_quat[2]
+        odom.pose.pose.orientation.w = odom_quat[3]
+
+        self.get_logger().info(f"X {self.x:.3f},Y {self.y:.3f}")
 
         # オドメトリを配信
         self.odom_pub.publish(odom)
@@ -111,8 +103,10 @@ class OdometryCalc(Node):
 def main(args=None):
     rclpy.init(args=args)
     odom_calc = OdometryCalc()
-    rclpy.spin(odom_calc)
-
+    try:
+        rclpy.spin(odom_calc)
+    except:
+        return
     odom_calc.destroy_node()
     rclpy.shutdown()
 
