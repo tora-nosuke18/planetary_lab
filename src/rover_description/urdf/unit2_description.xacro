@@ -141,14 +141,14 @@
   </collision>
 </link>
 
-<joint name="left_back" type="continuous">
+<joint name="left_back" type="fixed">
   <origin xyz="-0.200297 0.0 -0.166452" rpy="0 0 0"/>
   <parent link="unit2_left_chasis_1"/>
   <child link="unit2_wheel_4"/>
   <axis xyz="-0.0 1.0 0.0"/>
 </joint>
 
-<joint name="left_front" type="continuous">
+<joint name="left_front" type="fixed">
   <origin xyz="0.188382 0.013 -0.179825" rpy="0 0 0"/>
   <parent link="unit2_left_chasis_1"/>
   <child link="unit2_wheel_3"/>
@@ -171,22 +171,22 @@
   <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
 </joint>
 
-<joint name="right_front" type="continuous">
+<joint name="right_front" type="fixed">
   <origin xyz="0.194454 -0.0035 -0.173241" rpy="0 0 0"/>
   <parent link="unit2_right_chasis_1"/>
   <child link="unit2_wheel_1"/>
   <axis xyz="0.0 1.0 -0.0"/>
 </joint>
 
-<joint name="right_back" type="continuous">
+<joint name="right_back" type="fixed">
   <origin xyz="-0.194454 -0.0165 -0.173241" rpy="0 0 0"/>
   <parent link="unit2_right_chasis_1"/>
   <child link="unit2_wheel_2"/>
   <axis xyz="0.0 1.0 -0.0"/>
 </joint>
 
-<!-- camera -->
-<link name="camera_link"/>
+<!-- gazebo_camera -->
+<!-- <link name="camera_link"/>
 <link name="depth_link"/>
 
 <joint name="base_to_camera" type="fixed">
@@ -199,10 +199,10 @@
   <origin xyz="0.0 0.0 0.0" rpy="-1.5707 0 -1.5707"/>
   <parent link="camera_link"/>
   <child link="depth_link"/>
-</joint>
+</joint> -->
 
 <!-- imu -->
-<link name="imu_link">
+<!-- <link name="imu_link">
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
@@ -230,6 +230,6 @@
   <origin xyz="0. 0.0 0.3" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="imu_link"/>
-</joint>
+</joint> -->
 
 </robot>
