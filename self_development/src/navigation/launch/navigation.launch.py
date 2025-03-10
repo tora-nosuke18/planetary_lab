@@ -9,30 +9,41 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 
 def generate_launch_description():
-    ld = LaunchDescription()
 
-    params_file = LaunchConfiguration(
+    nav2_params = LaunchConfiguration(
         'params', default=[os.path.join(
                 get_package_share_directory('navigation'), 'params'),
-                           '/navigation_params.yaml']
+                           '/nav2_real.yaml']
     )
 
-    navigation_launch = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory('nav2_bringup'), 'launch'),
-                '/navigation_launch.py']),
-            launch_arguments ={'params_file' :[params_file],'use_sim_time': "True"}.items(),        # we must set use_sim_time to True
-        )
+    ekf_params = LaunchConfiguration(
+        'params', default=[os.path.join(
+                get_package_share_directory('navigation'), 'params'),
+                           '/ekf_real.yaml']
+    )
+    use_sim_time = LaunchConfiguration('use_sim_time', default="False")
+
+
+    return LaunchDescription([
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource([os.path.join(
+        #         get_package_share_directory('nav2_bringup'), 'launch'),
+        #         '/navigation_launch.py']),
+        #     launch_arguments ={'params_file' :[nav2_params],'use_sim_time': use_sim_time}.items(),        # we must set use_sim_time to True
+        # ),
     
-    localization  =  Node(
+        Node(
             package='robot_localization',
             executable='ekf_node',
             name='ekf_filter_node',
             output='screen',
-            parameters=[os.path.join(get_package_share_directory("robot_localization"), 'params', 'ekf.yaml')],
-           )
-           
-    ld.add_action(navigation_launch)
-    ld.add_action(localization)
+            parameters=[ekf_params, {'use_sim_time': use_sim_time}],
+           ),
 
-    return ld
+        # Node(
+        #     package='navigation',
+        #     executable='odom_base_broadcaster',
+        #     name='odom_base_broadcaster',
+        #     output='screen',
+        # ),
+    ])

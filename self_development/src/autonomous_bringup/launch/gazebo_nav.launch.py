@@ -15,7 +15,7 @@ def generate_launch_description():
             
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
-                os.path.join(simulation_cmd, 'launch', 'gazebo_world.launch.py')
+                os.path.join(simulation_cmd, 'launch', 'rgbd_gazebo.launch.py')
             )
         ),
 
@@ -25,11 +25,11 @@ def generate_launch_description():
             )
         ),
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(navigation_cmd, 'launch', 'navigation.launch.py')
-            )
-        ),
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource(
+        #         os.path.join(navigation_cmd, 'launch', 'navigation.launch.py')
+        #     )
+        # ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
