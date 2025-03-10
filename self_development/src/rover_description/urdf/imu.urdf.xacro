@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<robot name="rover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find rover_description)/urdf/stereo.imu.xacro"/>
+    <xacro:property name="M_PI" value="3.1415926535897931" />
+
+    <link name="imu_link">
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="silver">
+          <color rgba="0.700 0.700 0.700 1.000"/>
+        </material>
+      </visual>
+      <inertial>
+        <mass value="1e-5" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+      </inertial>
+    </link>
+
+    <joint name="camera_joint" type="fixed">
+      <axis xyz="0 1 0" />
+      <origin xyz="0.33 0.0 0.4" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="camera_link"/>
+    </joint>
+
+    <joint name="left_optical_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
+      <parent link="camera_link" />
+      <child link="stereo_camera_left_frame" />
+    </joint>
+    
+    <link name="stereo_camera_left_frame"/>
+
+    <joint name="stereo_camera_right_joint" type="fixed">
+      <origin xyz="0 -0.05 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
+      <parent link="camera_link" />
+      <child link="stereo_camera_right_frame" />
+    </joint>
+    
+    <link name="stereo_camera_right_frame"/>
+
+    <xacro:gazebo_d435 topics_ns="stereo_camera" />
+
+</robot>
