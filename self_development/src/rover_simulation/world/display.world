@@ -10,14 +10,14 @@
       <uri>model://sun</uri>
     </include>
 
-    <include>
-      <name>measurement</name>
-      <uri>model://mars_terrain</uri>
-      <static>true</static>
-      <!-- 平地 -->
-      <pose>-170 295 0.01 0 0 -4.71</pose>
-      <!-- 荒地 -->
-      <!-- <pose>-230 160 0.1 0 0 -4.71</pose> -->
-    </include>
+    <model name="mars_terrain">
+      <static>1</static>
+      <include>
+        <uri>model://mars_terrain</uri>
+        <pose>-170 295 0.01 0 0 -4.71</pose>
+        <!-- 荒地 -->
+        <!-- <pose>-230 160 0.1 0 0 -4.71</pose> -->
+      </include>
+    </model>
   </world>
 </sdf>
