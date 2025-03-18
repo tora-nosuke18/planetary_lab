@@ -22,10 +22,10 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'rover = controller.rover:main',
-            'odom_calc = controller.odom_calc:main',
-            'wheel_ctl_serial_master=controller.wheel_ctl_serial_master:main',
-            'teleop_joy_control=controller.teleop_joy_control:main',
+            'rover = rover_controller.rover:main',
+            'odom_calc = rover_controller.odom_calc:main',
+            'wheel_ctl_serial_master= rover_controller.wheel_ctl_serial_master:main',
+            'teleop_joy_control= rover_controller.teleop_joy_control:main',
         ],
     },
 )
