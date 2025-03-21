@@ -35,7 +35,7 @@ class OdometryCalc(Node):
 
         self.odom_broadcaster = TransformBroadcaster(self)
 
-        self.create_subscription(Float64MultiArray, 'wheel_speed', self.enc_cb, 10) #/C620/actual_rad
+        self.create_subscription(Float64MultiArray, 'wheel_rps', self.enc_cb, 10) #/C620/actual_rad
         self.odom_pub = self.create_publisher(Odometry, 'odom', 10)
 
     def enc_cb(self, msg):

@@ -27,7 +27,7 @@ class Rover(Node):
         left_wheel = (twist.linear.x - twist.angular.z * 0.5 * tread) / wheel_radius
         right_wheel = (twist.linear.x + twist.angular.z * 0.5 * tread) / wheel_radius   
 
-        wheel_msg.data = [left_wheel, left_wheel, -right_wheel, -right_wheel] 
+        wheel_msg.data = [left_wheel, left_wheel, right_wheel, right_wheel] 
 
         self.targets_pub.publish(wheel_msg)
 
