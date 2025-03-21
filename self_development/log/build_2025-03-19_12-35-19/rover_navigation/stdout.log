@@ -1,0 +1,32 @@
+running develop
+running egg_info
+creating rover_navigation.egg-info
+writing rover_navigation.egg-info/PKG-INFO
+writing dependency_links to rover_navigation.egg-info/dependency_links.txt
+writing entry points to rover_navigation.egg-info/entry_points.txt
+writing requirements to rover_navigation.egg-info/requires.txt
+writing top-level names to rover_navigation.egg-info/top_level.txt
+writing manifest file 'rover_navigation.egg-info/SOURCES.txt'
+reading manifest file 'rover_navigation.egg-info/SOURCES.txt'
+writing manifest file 'rover_navigation.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/tora/soft_ws/self_development/install/rover_navigation/lib/python3.10/site-packages/rover-navigation.egg-link (link to .)
+Installing wz_filter_node script to /home/tora/soft_ws/self_development/install/rover_navigation/lib/rover_navigation
+
+Installed /home/tora/soft_ws/self_development/build/rover_navigation
+running symlink_data
+creating /home/tora/soft_ws/self_development/install/rover_navigation/share/ament_index
+creating /home/tora/soft_ws/self_development/install/rover_navigation/share/ament_index/resource_index
+creating /home/tora/soft_ws/self_development/install/rover_navigation/share/ament_index/resource_index/packages
+symbolically linking /home/tora/soft_ws/self_development/build/rover_navigation/resource/rover_navigation -> /home/tora/soft_ws/self_development/install/rover_navigation/share/ament_index/resource_index/packages
+symbolically linking /home/tora/soft_ws/self_development/build/rover_navigation/package.xml -> /home/tora/soft_ws/self_development/install/rover_navigation/share/rover_navigation
+creating /home/tora/soft_ws/self_development/install/rover_navigation/share/rover_navigation/launch
+symbolically linking /home/tora/soft_ws/self_development/build/rover_navigation/launch/rgbd_gazebo.launch.py -> /home/tora/soft_ws/self_development/install/rover_navigation/share/rover_navigation/launch
+symbolically linking /home/tora/soft_ws/self_development/build/rover_navigation/launch/navigation.launch.py -> /home/tora/soft_ws/self_development/install/rover_navigation/share/rover_navigation/launch
+symbolically linking /home/tora/soft_ws/self_development/build/rover_navigation/launch/rgbd_real.launch.py -> /home/tora/soft_ws/self_development/install/rover_navigation/share/rover_navigation/launch
+symbolically linking /home/tora/soft_ws/self_development/build/rover_navigation/launch/stereo_slam.launch.py -> /home/tora/soft_ws/self_development/install/rover_navigation/share/rover_navigation/launch
+creating /home/tora/soft_ws/self_development/install/rover_navigation/share/rover_navigation/params
+symbolically linking /home/tora/soft_ws/self_development/build/rover_navigation/params/ekf_real.yaml -> /home/tora/soft_ws/self_development/install/rover_navigation/share/rover_navigation/params
+symbolically linking /home/tora/soft_ws/self_development/build/rover_navigation/params/nav2_real.yaml -> /home/tora/soft_ws/self_development/install/rover_navigation/share/rover_navigation/params
+symbolically linking /home/tora/soft_ws/self_development/build/rover_navigation/params/nav2_gazebo.yaml -> /home/tora/soft_ws/self_development/install/rover_navigation/share/rover_navigation/params
+symbolically linking /home/tora/soft_ws/self_development/build/rover_navigation/params/ekf_gazebo.yaml -> /home/tora/soft_ws/self_development/install/rover_navigation/share/rover_navigation/params

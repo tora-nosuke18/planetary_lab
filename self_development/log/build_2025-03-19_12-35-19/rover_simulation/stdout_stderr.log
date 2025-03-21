@@ -1,0 +1,75 @@
+running develop
+running egg_info
+creating rover_simulation.egg-info
+writing rover_simulation.egg-info/PKG-INFO
+writing dependency_links to rover_simulation.egg-info/dependency_links.txt
+writing entry points to rover_simulation.egg-info/entry_points.txt
+writing requirements to rover_simulation.egg-info/requires.txt
+writing top-level names to rover_simulation.egg-info/top_level.txt
+writing manifest file 'rover_simulation.egg-info/SOURCES.txt'
+reading manifest file 'rover_simulation.egg-info/SOURCES.txt'
+writing manifest file 'rover_simulation.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/tora/soft_ws/self_development/install/rover_simulation/lib/python3.10/site-packages/rover-simulation.egg-link (link to .)
+
+Installed /home/tora/soft_ws/self_development/build/rover_simulation
+running symlink_data
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/ament_index
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/ament_index/resource_index
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/ament_index/resource_index/packages
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/resource/rover_simulation -> /home/tora/soft_ws/self_development/install/rover_simulation/share/ament_index/resource_index/packages
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/package.xml -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/launch
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/launch/nav2_rviz.launch.py -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/launch/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/launch/display.launch.py -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/launch/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/launch/gazebo_world.launch.py -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/launch/
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/urdf
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/urdf/rover.trans -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/urdf/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/urdf/rover_description.xacro -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/urdf/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/urdf/diff_control.xacro -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/urdf/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/urdf/unit2.trans -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/urdf/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/urdf/rgbd.gazebo.xacro -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/urdf/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/urdf/rover.xacro -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/urdf/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/urdf/unit2_description.xacro -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/urdf/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/urdf/imu.gazebo.xacro -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/urdf/
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/chassis_left_1.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/unit2_wheel_1.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/unit2_left_chasis_1.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/unit2_wheel_3.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/d435.dae -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/wheel_right_front_1.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/wheel_right_back_1.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/chassis_right_1.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/unit2_base_link.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/unit2_right_chasis_1.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/unit2_wheel_2.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/unit2_wheel_4.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/base_link.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/wheel_left_front_1.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/meshes/wheel_left_back_1.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/meshes/
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/config
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/config/display.rviz -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/config/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/config/diff_robot.yaml -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/config/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/config/rover_nav2.rviz -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/config/
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/world
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/world/display.world -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/world/
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/model.sdf -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/model.config -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/marsterrain.dae -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/marsterrain.obj -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/marsterrain.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/textures/rock_face_03_diff_2k.jpg -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/scripts/repeated.material -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/meshes
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/marsterrain.dae -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/meshes
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/marsterrain.obj -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/meshes
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/marsterrain.stl -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/meshes
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/textures/rock_face_03_diff_2k.jpg -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/meshes
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/scripts/repeated.material -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/meshes
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/meshes/textures
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/textures/rock_face_03_diff_2k.jpg -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/meshes/textures
+creating /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/meshes/scripts
+symbolically linking /home/tora/soft_ws/self_development/build/rover_simulation/models/mars_terrain/meshes/scripts/repeated.material -> /home/tora/soft_ws/self_development/install/rover_simulation/share/rover_simulation/models/mars_terrain/meshes/scripts

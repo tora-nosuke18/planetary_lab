@@ -1,0 +1,6 @@
+[console_scripts]
+odom_calc = rover_controller.odom_calc:main
+rover = rover_controller.rover:main
+teleop_joy_control = rover_controller.teleop_joy_control:main
+wheel_ctl_serial_master = rover_controller.wheel_ctl_serial_master:main
+

@@ -77,7 +77,7 @@ def generate_launch_description():
     nav2_params = LaunchConfiguration(
         'params', default=[os.path.join(
                 get_package_share_directory('rover_navigation'), 'params'),
-                           '/nav2_real.yaml']
+                           '/nav2_gazebo.yaml']
     )
 
     ekf_params = LaunchConfiguration(
@@ -132,10 +132,10 @@ def generate_launch_description():
             parameters=[ekf_params, {'use_sim_time': use_sim_time}],
            ),
 
-        # Node(
-        #     package='rover_navigation',
-        #     executable='odom_base_broadcaster',
-        #     name='odom_base_broadcaster',
-        #     output='screen',
-        # ),
+        Node(
+            package='rover_navigation',
+            executable='wz_filter_node',
+            name='wz_filter_node',
+            output='screen',
+        ),
     ])

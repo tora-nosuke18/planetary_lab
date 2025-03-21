@@ -1,0 +1,1 @@
+/home/tora/soft_ws/self_development/build/rover_simulation/launch/nav2_rviz.launch.py

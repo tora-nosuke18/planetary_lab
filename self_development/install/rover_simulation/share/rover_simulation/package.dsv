@@ -1,0 +1,9 @@
+source;share/rover_simulation/hook/pythonpath.ps1
+source;share/rover_simulation/hook/pythonpath.dsv
+source;share/rover_simulation/hook/pythonpath.sh
+source;share/rover_simulation/hook/ament_prefix_path.ps1
+source;share/rover_simulation/hook/ament_prefix_path.dsv
+source;share/rover_simulation/hook/ament_prefix_path.sh
+source;../../build/rover_simulation/share/rover_simulation/hook/pythonpath_develop.ps1
+source;../../build/rover_simulation/share/rover_simulation/hook/pythonpath_develop.dsv
+source;../../build/rover_simulation/share/rover_simulation/hook/pythonpath_develop.sh
