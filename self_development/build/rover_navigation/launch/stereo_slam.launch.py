@@ -1,1 +1,0 @@
-/home/tora/soft_ws/self_development/src/rover_navigation/launch/stereo_slam.launch.py

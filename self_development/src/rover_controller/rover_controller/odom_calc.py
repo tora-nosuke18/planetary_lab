@@ -1,113 +1,114 @@
-import math
-from math import sin, cos, pi
-
+#!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from nav_msgs.msg import Odometry
-from geometry_msgs.msg import Point, Pose, Quaternion, Twist, Vector3
 from std_msgs.msg import Float64MultiArray
-from tf_transformations import quaternion_from_euler
-from tf2_ros import TransformBroadcaster
+from nav_msgs.msg import Odometry
 from geometry_msgs.msg import TransformStamped
+from tf2_ros import TransformBroadcaster
+import math
+import time
 
-class OdometryCalc(Node):
+class DiffDriveOdom(Node):
     def __init__(self):
-        super().__init__('odom_calc')
+        super().__init__('diff_drive_odom')
 
-        self.r = 0.075  # 車輪半径
-        self.TREAD = 0.2  # トレッド幅
+        # パラメータの宣言
+        self.declare_parameter('wheel_base', 0.2)  # 車輪間距離[m]
+        self.declare_parameter('wheel_radius', 0.05)  # 車輪半径[m]
+        self.declare_parameter('publish_tf', False)  # TFのブロードキャスト
 
-        self.x = 0.0  # x座標
-        self.y = 0.0  # y座標
-        self.th = 0.0  # 姿勢
+        self.wheel_base = self.get_parameter('wheel_base').get_parameter_value().double_value
+        self.wheel_radius = self.get_parameter('wheel_radius').get_parameter_value().double_value
+        self.publish_tf = self.get_parameter('publish_tf').get_parameter_value().bool_value
 
-        self.vx = 0.0  # x方向速度
-        self.vy = 0.0  # y方向速度
-        self.vth = 0.0  # 角速度
+        self.subscription = self.create_subscription(
+            Float64MultiArray,
+            'wheel_rps',
+            self.wheel_callback,
+            10
+        )
 
-        self.prev_left_enc = 0.0  # 前回の左エンコーダ値
-        self.prev_right_enc = 0.0  # 前回の右エンコーダ値
-
-        self.prev_time = self.get_clock().now()  # 前回の時間
-        
-        self.current_left_enc = 0.0  # 現在の左エンコーダ値
-        self.current_right_enc = 0.0  # 現在の右エンコーダ値
-
-        self.odom_broadcaster = TransformBroadcaster(self)
-
-        self.create_subscription(Float64MultiArray, 'wheel_speed', self.enc_cb, 10) #/C620/actual_rad
         self.odom_pub = self.create_publisher(Odometry, 'odom', 10)
 
-    def enc_cb(self, msg):
-        # エンコーダ値を取得
-        left_enc = msg.data[0]  # 左エンコーダ値
-        right_enc = msg.data[1]  # 右エンコーダ値
+        if self.publish_tf:
+            self.tf_broadcaster = TransformBroadcaster(self)
 
-        # 経過時間を計算
+        self.x = 0.0
+        self.y = 0.0
+        self.theta = 0.0
+        self.last_time = self.get_clock().now()
+
+    def wheel_callback(self, msg):
+        try:
+            left_rps = msg.data[0]
+            right_rps = msg.data[1]
+        except IndexError:
+            self.get_logger().warn("wheel_rpsデータが不完全です")
+            return
+
+        # 現在時刻と経過時間
         current_time = self.get_clock().now()
-        dt = (current_time - self.prev_time).nanoseconds / 1e9  # ナノ秒を秒に変換
+        dt = (current_time - self.last_time).nanoseconds * 1e-9
+        self.last_time = current_time
 
-        # 角速度から速度を計算
-        self.vx = self.r * (right_enc + left_enc) / 2
-        self.vy = 0.0
-        self.vth = self.r * (right_enc - left_enc) / (dt * self.TREAD)
-        
-        # 速度からオドメトリを計算
-        delta_x = (self.vx * math.cos(self.th) - self.vy * math.sin(self.th)) * dt
-        delta_y = (self.vx * math.sin(self.th) + self.vy * math.cos(self.th)) * dt
-        delta_th = self.vth * dt
+        # 直線速度・角速度を計算
+        v_left = left_rps * self.wheel_radius
+        v_right = right_rps * self.wheel_radius
+
+        v = (v_right + v_left) / 2.0
+        omega = (v_right - v_left) / self.wheel_base
+
+        # 位置・姿勢の更新
+        delta_x = v * math.cos(self.theta) * dt
+        delta_y = v * math.sin(self.theta) * dt
+        delta_theta = omega * dt
 
         self.x += delta_x
-        self.y += delta_y  
-        self.th += delta_th
+        self.y += delta_y
+        self.theta += delta_theta
 
-        # クオータニオンを計算
-        odom_quat = quaternion_from_euler(0, 0, self.th)
+        # オドメトリメッセージの作成
+        odom_msg = Odometry()
+        odom_msg.header.stamp = current_time.to_msg()
+        odom_msg.header.frame_id = "odom"
+        odom_msg.child_frame_id = "base_link"
+        odom_msg.pose.pose.position.x = self.x
+        odom_msg.pose.pose.position.y = self.y
+        odom_msg.pose.pose.position.z = 0.0
 
-        # tf変換を送信
-        # odom_trans = TransformStamped()
-        # odom_trans.header.stamp = current_time.to_msg()
-        # odom_trans.header.frame_id = "odom"
-        # odom_trans.child_frame_id = "base_link"
+        # 四元数変換
+        qz = math.sin(self.theta / 2.0)
+        qw = math.cos(self.theta / 2.0)
+        odom_msg.pose.pose.orientation.z = qz
+        odom_msg.pose.pose.orientation.w = qw
 
-        # odom_trans.transform.translation.x = self.x
-        # odom_trans.transform.translation.y = self.y
-        # odom_trans.transform.translation.z = 0.0
-        # odom_trans.transform.rotation.x = odom_quat[0]
-        # odom_trans.transform.rotation.y = odom_quat[1]
-        # odom_trans.transform.rotation.z = odom_quat[2]
-        # odom_trans.transform.rotation.w = odom_quat[3]
+        odom_msg.twist.twist.linear.x = v
+        odom_msg.twist.twist.angular.z = omega
 
-        # self.odom_broadcaster.sendTransform(odom_trans)
+        self.odom_pub.publish(odom_msg)
+        self.get_logger().info('Current Position X: %f, Y: %f' % (self.x, self.y))
 
-        # オドメトリメッセージをROS 2で配信
-        odom = Odometry()
-        odom.header.stamp = current_time.to_msg()
-        odom.header.frame_id = "odom"
-        odom.child_frame_id = "base_link"
-
-        odom.pose.pose.position.x = self.x
-        odom.pose.pose.position.y = self.y
-        odom.pose.pose.position.z = 0.0
-        odom.pose.pose.orientation.x = odom_quat[0]
-        odom.pose.pose.orientation.y = odom_quat[1]
-        odom.pose.pose.orientation.z = odom_quat[2]
-        odom.pose.pose.orientation.w = odom_quat[3]
-
-        self.get_logger().info(f"X {self.x:.3f},Y {self.y:.3f}")
-
-        # オドメトリを配信
-        self.odom_pub.publish(odom)
-        self.prev_time = current_time
+        # TFのブロードキャスト
+        if self.publish_tf:
+            t = TransformStamped()
+            t.header.stamp = current_time.to_msg()
+            t.header.frame_id = "odom"
+            t.child_frame_id = "base_link"
+            t.transform.translation.x = self.x
+            t.transform.translation.y = self.y
+            t.transform.translation.z = 0.0
+            t.transform.rotation.z = qz
+            t.transform.rotation.w = qw
+            self.tf_broadcaster.sendTransform(t)
 
 def main(args=None):
     rclpy.init(args=args)
-    odom_calc = OdometryCalc()
+    node = DiffDriveOdom()
     try:
-        rclpy.spin(odom_calc)
-    except:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
         return
-    odom_calc.destroy_node()
+    node.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

@@ -1,3 +1,0 @@
-[console_scripts]
-wz_filter_node = rover_navigation.wz_filter_node:main
-

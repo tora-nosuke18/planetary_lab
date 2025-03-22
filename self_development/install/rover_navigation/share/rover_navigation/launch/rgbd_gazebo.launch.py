@@ -1,1 +1,0 @@
-/home/tora/soft_ws/self_development/build/rover_navigation/launch/rgbd_gazebo.launch.py

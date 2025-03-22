@@ -1,1 +1,0 @@
-/home/tora/soft_ws/self_development/build/rover_bringup/launch/real_nav.launch.py
