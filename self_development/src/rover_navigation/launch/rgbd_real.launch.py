@@ -10,23 +10,29 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     rgbd_odom_parameters=[{
-          'frame_id':'base_link',
+        'frame_id': 'base_link',        #VO固有のフレーム
+        'odom_frame_id': 'camera_depth_optical',        #カメラの設置位置のオフセットを設定
+        'nitial_pose' : '0.35 0.0 0.4 0.0 0.0 0.0',        # a superimportant parameter, when we fuse sensor data with ekf nodes.
+        'odom_guess_frame_id': 'odom',
+        'publish_null_when_lost': False,
           'subscribe_depth':True,
           'subscribe_odom_info':False,
           'approx_sync':False,
-          'wait_imu_to_init':True,
-          'publish_tf': False
+          'wait_imu_to_init':False,
+          'publish_tf': False,
+        'queue_size': 10,
+        ' wait_imu_to_init':True
         }]
 
     rtabmap_parameters=[{
           'frame_id':'base_link',
           'subscribe_depth':True,
           'subscribe_odom_info':False,
-          'approx_sync':False,
+          'approx_sync':True,
           'wait_imu_to_init':True,
           'GridGlobal/MinSize': '100',
-        'wait_for_transform_duration': 0.02,
-
+        'wait_for_transform_duration': 0.05,
+        'queue_size': 10,
         }]
 
     rgbd_odom_remappings=[
@@ -99,12 +105,12 @@ def generate_launch_description():
             remappings=[('imu/data_raw', '/camera/imu')]),
 
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory('nav2_bringup'), 'launch'),
-                '/navigation_launch.py']),
-            launch_arguments ={'params_file' :[nav2_params]}.items(),        # we must set use_sim_time to True
-        ),
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource([os.path.join(
+        #         get_package_share_directory('nav2_bringup'), 'launch'),
+        #         '/navigation_launch.py']),
+        #     launch_arguments ={'params_file' :[nav2_params]}.items(),        # we must set use_sim_time to True
+        # ),
     
         Node(
             package='robot_localization',
@@ -114,10 +120,10 @@ def generate_launch_description():
             parameters=[ekf_params],
            ),
 
-        Node(
-            package='navigation',
-            executable='odom_base_broadcaster',
-            name='odom_base_broadcaster',
-            output='screen',
-        ),
+        # Node(
+        #     package='rover_navigation',
+        #     executable='wz_filter_node',
+        #     name='wz_filter_node',
+        #     output='screen',
+        # ),
     ])

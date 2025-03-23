@@ -168,7 +168,7 @@ controller_server:
         near_goal_distance: 0.5
 
 
-        inflation_radius: 0.10
+        inflation_radius: 0.50
         #The configured inflation radius (0.550) is smaller than the computed inscribed radius of your footprint, 
         #it is highly recommended to set inflation radius to be at least as big as the inscribed radius to avoid collisions
 
@@ -233,7 +233,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 2.0
-        inflation_radius: 0.10
+        inflation_radius: 0.50
 
       #To activate voxel layer, have it subscribe /obstacles topic from obstacle detection node
       voxel_layer:
@@ -291,7 +291,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.10
+        inflation_radius: 0.50
       always_send_full_costmap: True
 
 map_server:
