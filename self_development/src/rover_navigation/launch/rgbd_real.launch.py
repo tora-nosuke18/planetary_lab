@@ -126,4 +126,11 @@ def generate_launch_description():
         #     name='wz_filter_node',
         #     output='screen',
         # ),
+
+        Node(
+            package='rover_navigation',
+            executable='imu_filter_node',
+            name='imu_filter_node',
+            output='screen',
+        )
     ])

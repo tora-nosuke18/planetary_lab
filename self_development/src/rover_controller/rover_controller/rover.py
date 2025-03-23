@@ -31,7 +31,7 @@ class Rover(Node):
 
         self.targets_pub.publish(wheel_msg)
 
-        self.log.info(f'targets : {wheel_msg.data} m/s')
+        self.log.info(f'targets : {wheel_msg.data} rad/s')
 
 def main():
     rclpy.init()
