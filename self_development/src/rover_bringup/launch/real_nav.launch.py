@@ -19,15 +19,15 @@ def generate_launch_description():
             )
         ),
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(simulation_cmd, 'launch', 'display.launch.py')
-            )
-        ),
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource(
+        #         os.path.join(simulation_cmd, 'launch', 'display.launch.py')
+        #     )
+        # ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
-                os.path.join(controller_cmd, 'launch', 'simple_run.launch.xml')
+                os.path.join(controller_cmd, 'launch', 'simple_run.launch.py')
             )
         )
     ])
