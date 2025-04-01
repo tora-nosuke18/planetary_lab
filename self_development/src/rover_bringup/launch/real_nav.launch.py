@@ -9,6 +9,7 @@ def generate_launch_description():
 
     navigation_cmd = get_package_share_directory('rover_navigation')
     simulation_cmd = get_package_share_directory('rover_simulation')
+    controller_cmd = get_package_share_directory('rover_controller')
 
     return LaunchDescription([
 
@@ -18,9 +19,15 @@ def generate_launch_description():
             )
         ),
 
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource(
+        #         os.path.join(simulation_cmd, 'launch', 'display.launch.py')
+        #     )
+        # ),
+
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
-                os.path.join(simulation_cmd, 'launch', 'nav2_rviz.launch.py')
+                os.path.join(controller_cmd, 'launch', 'simple_run.launch.py')
             )
-        ),
+        )
     ])
