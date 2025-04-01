@@ -24,6 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
             "wz_filter_node = rover_navigation.wz_filter_node:main",
+            "imu_filter_node = rover_navigation.imu_filter_node:main",
         ],
     },
 )
