@@ -3,7 +3,7 @@ bt_navigator:
     use_sim_time: False
     global_frame: map
     robot_base_frame: base_link
-    odom_topic: /odometry/filtered
+    odom_topic: /vo
     # odom_topic: "/visual/odom"
     bt_loop_duration: 10
     default_server_timeout: 20
@@ -168,7 +168,7 @@ controller_server:
         near_goal_distance: 0.5
 
 
-        inflation_radius: 0.50
+        inflation_radius: 1.2
         #The configured inflation radius (0.550) is smaller than the computed inscribed radius of your footprint, 
         #it is highly recommended to set inflation radius to be at least as big as the inscribed radius to avoid collisions
 
@@ -220,8 +220,8 @@ local_costmap:
     ros__parameters:
       update_frequency: 10.0
       publish_frequency: 5.0
-      global_frame: odom
-      # global_frame: visual_odom
+      global_frame: vo
+      # global_frame: vo
       robot_base_frame: base_link
       use_sim_time: False
       rolling_window: true
@@ -233,7 +233,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 2.0
-        inflation_radius: 0.50
+        inflation_radius: 1.2
 
       #To activate voxel layer, have it subscribe /obstacles topic from obstacle detection node
       voxel_layer:
@@ -291,7 +291,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.50
+        inflation_radius: 1.2
       always_send_full_costmap: True
 
 map_server:
@@ -377,8 +377,8 @@ behavior_server:
       plugin: "nav2_behaviors/Wait"
     assisted_teleop:
       plugin: "nav2_behaviors/AssistedTeleop"
-    global_frame: odom
-    # global_frame: visual_odom
+    global_frame: vo
+    # global_frame: vo
     robot_base_frame: base_link
     transform_tolerance: 0.1
     use_sim_time: False
@@ -412,8 +412,8 @@ velocity_smoother:
     min_velocity: [-0.5, 0.0, -2.5]
     max_accel: [0.5, 0.0, 3.2]
     max_decel: [-0.5, 0.0, -3.2]
-    odom_topic: "/odometry/filtered"
-    # odom_topic: "/visual/odom"
+    odom_topic: "/vo"
+    # odom_topic: "/vo"
     odom_duration: 0.2
     deadband_velocity: [0.0, 0.0, 0.0]
     velocity_timeout: 1.0

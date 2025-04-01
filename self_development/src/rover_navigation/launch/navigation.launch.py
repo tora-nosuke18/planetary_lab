@@ -32,18 +32,18 @@ def generate_launch_description():
             launch_arguments ={'params_file' :[nav2_params],'use_sim_time': use_sim_time}.items(),        # we must set use_sim_time to True
         ),
     
-        Node(
-            package='robot_localization',
-            executable='ekf_node',
-            name='ekf_filter_node',
-            output='screen',
-            parameters=[ekf_params, {'use_sim_time': use_sim_time}],
-           ),
+        # Node(
+        #     package='robot_localization',
+        #     executable='ekf_node',
+        #     name='ekf_filter_node',
+        #     output='screen',
+        #     parameters=[ekf_params, {'use_sim_time': use_sim_time}],
+        #    ),
 
-        Node(
-            package='rover_navigation',
-            executable='wz_filter_node',
-            name='wz_filter_node',
-            output='screen',
-        ),
+        # Node(
+        #     package='rover_navigation',
+        #     executable='wz_filter_node',
+        #     name='wz_filter_node',
+        #     output='screen',
+        # ),
     ])

@@ -16,12 +16,12 @@ class ImuFilter(Node):
 
         imu = Imu()
         imu.header = msg.header
-        imu.linear_acceleration.x = msg.linear_acceleration.x - 0.3715
-        imu.linear_acceleration.y = msg.linear_acceleration.y - 0.856
-        imu.linear_acceleration.z = msg.linear_acceleration.z - 0.346
+        imu.linear_acceleration.x = msg.linear_acceleration.x - 0.3745
+        imu.linear_acceleration.y = msg.linear_acceleration.y - 0.89
+        imu.linear_acceleration.z = msg.linear_acceleration.z - 0.80
         imu.angular_velocity = msg.angular_velocity
         imu.angular_velocity_covariance = msg.angular_velocity_covariance
-        imu.linear_acceleration_covariance = msg.linear_acceleration_covariance
+        imu.linear_acceleration_covariance = msg.linear_acceleration_covariance * 0
         imu.orientation = msg.orientation
         imu.orientation_covariance = msg.orientation_covariance
         self.publisher.publish(imu)
